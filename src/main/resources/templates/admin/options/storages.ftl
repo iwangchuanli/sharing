@@ -32,7 +32,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">域名绑定</label>
             <div class="col-sm-6">
-                <input type="text" name="upyun_oss_domain" class="form-control" value="${options['upyun_oss_domain']}" placeholder="示例: http://mtons.b0.upaiyun.com">
+                <input type="text" name="upyun_oss_domain" class="form-control" value="${options['upyun_oss_domain']}" placeholder="示例: http://sharing.b0.upaiyun.com">
             </div>
         </div>
         <div class="form-group">
@@ -96,7 +96,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">域名绑定</label>
             <div class="col-sm-6">
-                <input type="text" name="qiniu_oss_domain" class="form-control" value="${options['qiniu_oss_domain']}" placeholder="示例: http://qiniu.mtons.com">
+                <input type="text" name="qiniu_oss_domain" class="form-control" value="${options['qiniu_oss_domain']}" placeholder="示例: http://qiniu.sharing.com">
             </div>
         </div>
         <div class="form-group">

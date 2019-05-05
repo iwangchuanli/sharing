@@ -8,8 +8,8 @@
     <title>后台管理 - ${options['site_name']}</title>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" href="http://mtons.com/dist/images/logo.png"/>
-    <link rel="shortcut icon" href="http://mtons.com/dist/images/logo.png"/>
+    <link rel="apple-touch-icon-precomposed" href="http://sharing.wangcl.xyz/dist/images/logo.png"/>
+    <link rel="shortcut icon" href="http://sharing.wangcl.xyz/dist/images/logo.png"/>
 
     <!-- Bootstrap -->
     <link href="${base}/dist/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
