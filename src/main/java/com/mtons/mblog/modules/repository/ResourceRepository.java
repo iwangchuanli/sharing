@@ -21,7 +21,7 @@ public interface ResourceRepository extends JpaRepository<Resource, Long>, JpaSp
 
     List<Resource> findByMd5In(List<String> md5);
 
-    @Query(value = "SELECT * FROM mto_resource WHERE amount <= 0 AND update_time < :time ", nativeQuery = true)
+    @Query(value = "SELECT * FROM sharing_resource WHERE amount <= 0 AND update_time < :time ", nativeQuery = true)
     List<Resource> find0Before(@Param("time")String time);
 
     @Modifying
