@@ -19,7 +19,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- Table structure for sharing_channel
 -- ----------------------------
 DROP TABLE IF EXISTS `,sharing_channel`;
-CREATE TABLE `sharing_channel` (
+/*CREATE TABLE `sharing_channel` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `key_` varchar(32) DEFAULT NULL,
   `name` varchar(32) DEFAULT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE `sharing_channel` (
   `thumbnail` varchar(128) DEFAULT NULL,
   `weight` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;*/
 
 -- ----------------------------
 -- Records of sharing_channel
