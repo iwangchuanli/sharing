@@ -8,7 +8,7 @@ import java.util.Date;
  * @author langhsu on 2015/8/31.
  */
 @Entity
-@Table(name = "mto_favorite", indexes = {
+@Table(name = "sharing_favorite", indexes = {
         @Index(name = "IK_USER_ID", columnList = "user_id")
 })
 public class Favorite {

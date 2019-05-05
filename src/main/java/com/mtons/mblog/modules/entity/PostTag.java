@@ -6,7 +6,7 @@ import javax.persistence.*;
  * @author : langhsu
  */
 @Entity
-@Table(name = "mto_post_tag", indexes = {
+@Table(name = "sharing_post_tag", indexes = {
         @Index(name = "IK_TAG_ID", columnList = "tag_id")
 })
 public class PostTag {

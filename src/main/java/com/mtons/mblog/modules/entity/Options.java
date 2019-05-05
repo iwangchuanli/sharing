@@ -17,7 +17,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name = "mto_options")
+@Table(name = "sharing_options")
 public class Options {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -20,7 +20,7 @@ import java.util.Date;
  *
  */
 @Entity
-@Table(name = "mto_user")
+@Table(name = "sharing_user")
 public class User implements Serializable {
 	private static final long serialVersionUID = -3629784071225214858L;
 

@@ -1,12 +1,4 @@
-/*
-+--------------------------------------------------------------------------
-|   Mblog [#RELEASE_VERSION#]
-|   ========================================
-|   Copyright (c) 2014, 2015 mtons. All Rights Reserved
-|   http://www.mtons.com
-|
-+---------------------------------------------------------------------------
-*/
+
 package com.mtons.mblog.modules.entity;
 
 import javax.persistence.*;
@@ -18,7 +10,7 @@ import java.io.Serializable;
  *
  */
 @Entity
-@Table(name = "mto_channel")
+@Table(name = "sharing_channel")
 public class Channel implements Serializable {
 	private static final long serialVersionUID = 2436696690653745208L;
 

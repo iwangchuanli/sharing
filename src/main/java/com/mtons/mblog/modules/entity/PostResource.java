@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 @Data
 @Entity
-@Table(name = "mto_post_resource", indexes = {
+@Table(name = "sharing_post_resource", indexes = {
         @Index(name = "IK_POST_ID", columnList = "post_id")
 })
 public class PostResource implements Serializable {

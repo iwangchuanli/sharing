@@ -18,7 +18,7 @@ import java.util.Date;
  * @author langhsu
  */
 @Entity
-@Table(name = "mto_comment", indexes = {
+@Table(name = "sharing_comment", indexes = {
         @Index(name = "IK_POST_ID", columnList = "post_id")
 })
 public class Comment {

@@ -27,7 +27,7 @@ import java.util.Date;
  *
  */
 @Entity
-@Table(name = "mto_post", indexes = {
+@Table(name = "sharing_post", indexes = {
 		@Index(name = "IK_CHANNEL_ID", columnList = "channel_id")
 })
 @FilterDefs({

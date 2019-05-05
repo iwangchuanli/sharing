@@ -7,7 +7,7 @@ import java.util.Date;
  * @author : langhsu
  */
 @Entity
-@Table(name = "mto_tag")
+@Table(name = "sharing_tag")
 public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

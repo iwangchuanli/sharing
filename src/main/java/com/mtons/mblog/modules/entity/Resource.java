@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @Entity
-@Table(name = "mto_resource",
+@Table(name = "sharing_resource",
         uniqueConstraints = {@UniqueConstraint(name = "UK_MD5", columnNames = {"md5"})}
 )
 public class Resource implements Serializable {

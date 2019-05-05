@@ -8,7 +8,7 @@ import java.util.Date;
  * @author langhsu on 2015/8/31.
  */
 @Entity
-@Table(name = "mto_message")
+@Table(name = "sharing_message")
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

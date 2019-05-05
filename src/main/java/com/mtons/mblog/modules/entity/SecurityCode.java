@@ -17,7 +17,7 @@ import java.util.Date;
  * @author langhsu on 2015/8/14.
  */
 @Entity
-@Table(name = "mto_security_code")
+@Table(name = "sharing_security_code")
 public class SecurityCode {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

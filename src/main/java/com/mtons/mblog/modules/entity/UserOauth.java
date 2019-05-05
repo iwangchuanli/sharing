@@ -17,7 +17,7 @@ import javax.persistence.*;
  * @author langhsu on 2015/8/12.
  */
 @Entity
-@Table(name = "mto_user_oauth")
+@Table(name = "sharing_user_oauth")
 public class UserOauth {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
