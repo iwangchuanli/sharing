@@ -3,7 +3,7 @@ package com.mtons.mblog.modules.entity;
 import javax.persistence.*;
 
 /**
- * @author : langhsu
+ * @author : wangcl
  */
 @Entity
 @Table(name = "sharing_post_tag", indexes = {

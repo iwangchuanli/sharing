@@ -14,7 +14,7 @@ import java.util.Date;
 
 /**
  * 验证码
- * @author langhsu on 2015/8/14.
+ * @author wangcl on 2015/8/14.
  */
 @Entity
 @Table(name = "sharing_security_code")

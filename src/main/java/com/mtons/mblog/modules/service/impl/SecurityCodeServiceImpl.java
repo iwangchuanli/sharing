@@ -17,7 +17,7 @@ import org.springframework.util.Assert;
 import java.util.Date;
 
 /**
- * @author langhsu on 2015/8/14.
+ * @author wangcl on 2015/8/14.
  */
 @Service
 public class SecurityCodeServiceImpl implements SecurityCodeService {

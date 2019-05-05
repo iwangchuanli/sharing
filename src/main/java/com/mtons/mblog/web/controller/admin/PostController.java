@@ -33,7 +33,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * @author langhsu
+ * @author wangcl
  *
  */
 @Controller("adminPostController")

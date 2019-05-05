@@ -3,7 +3,7 @@ package com.mtons.mblog.modules.data;
 
 /**
  * 第三方开发授权登录
- * @author langhsu
+ * @author wangcl
  */
 public class OpenOauthVO {
     private long id;

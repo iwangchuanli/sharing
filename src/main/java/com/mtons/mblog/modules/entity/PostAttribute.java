@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * Created by langhsu on 2015/10/25.
+ * Created by wangcl on 2015/10/25.
  */
 @Entity
 @Table(name = "sharing_post_attribute")

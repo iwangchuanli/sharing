@@ -24,7 +24,7 @@ import java.util.Set;
 
 /**
  * 文章管理
- * @author langhsu
+ * @author wangcl
  *
  */
 @CacheConfig(cacheNames = Consts.CACHE_USER)

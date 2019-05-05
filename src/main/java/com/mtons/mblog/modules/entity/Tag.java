@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * @author : langhsu
+ * @author : wangcl
  */
 @Entity
 @Table(name = "sharing_tag")

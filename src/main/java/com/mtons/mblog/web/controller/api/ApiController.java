@@ -28,7 +28,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 侧边栏数据加载
  *
- * @author langhsu
+ * @author wangcl
  */
 @RestController
 @RequestMapping("/api")

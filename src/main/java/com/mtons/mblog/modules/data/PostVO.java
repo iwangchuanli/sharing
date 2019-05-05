@@ -11,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.Serializable;
 
 /**
- * @author langhsu
+ * @author wangcl
  * 
  */
 public class PostVO extends Post implements Serializable {

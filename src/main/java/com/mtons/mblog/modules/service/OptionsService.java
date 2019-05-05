@@ -17,7 +17,7 @@ import java.util.Map;
 
 
 /**
- * @author langhsu
+ * @author wangcl
  *
  */
 public interface OptionsService {

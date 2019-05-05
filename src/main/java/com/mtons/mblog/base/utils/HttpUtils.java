@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * @author langhsu
+ * @author wangcl
  */
 public class HttpUtils {
 

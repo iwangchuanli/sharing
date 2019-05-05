@@ -2,7 +2,7 @@ version: '3'
 services:
     server:
         container_name: mtons-blog
-        image: langhsu/mblog:latest
+        image: wangcl/mblog:latest
         environment:
             TZ: Asia/Shanghai
         ports:

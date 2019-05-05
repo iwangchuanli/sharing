@@ -2,8 +2,8 @@
 
 [![Author](https://img.shields.io/badge/author-landy-green.svg?style=flat-square)](http://mtons.com)
 [![JDK](https://img.shields.io/badge/jdk-1.8-green.svg?style=flat-square)](#)
-[![Release](https://img.shields.io/github/release/langhsu/mblog.svg?style=flat-square)](https://github.com/langhsu/mblog)
-[![Docker](https://img.shields.io/docker/automated/langhsu/mblog.svg?style=flat-square)](https://hub.docker.com/r/langhsu/mblog)
+[![Release](https://img.shields.io/github/release/wangcl/mblog.svg?style=flat-square)](https://github.com/wangcl/mblog)
+[![Docker](https://img.shields.io/docker/automated/wangcl/mblog.svg?style=flat-square)](https://hub.docker.com/r/wangcl/mblog)
 
 ### 技术选型：
 
@@ -53,7 +53,7 @@
     10. 替换表单验证插件, 评论表情改为颜文字
     11. 我的主页和Ta人主页合并
     12. 优化了图片裁剪功能
-    13. 支持Docker, 详情见 https://hub.docker.com/r/langhsu/mblog
+    13. 支持Docker, 详情见 https://hub.docker.com/r/wangcl/mblog
     14. 邮件服务后台可配
     15. 新增标签页
     16. 新增注册邮箱验证开关(需要手动删除之前的 sharing_security_code 表)

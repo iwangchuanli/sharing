@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * 模块/内容分组
- * @author langhsu
+ * @author wangcl
  *
  */
 @Entity

@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * created by langhsu
+ * created by wangcl
  * on 2019/1/22
  */
 public class QiniuOSSTest {

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author langhsu
+ * @author wangcl
  */
 @RestController
 @RequestMapping("/user")
