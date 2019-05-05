@@ -16,10 +16,10 @@ Date: 2019-01-18 22:17:57
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for mto_channel
+-- Table structure for sharing_channel
 -- ----------------------------
-DROP TABLE IF EXISTS `mto_channel`;
-CREATE TABLE `mto_channel` (
+DROP TABLE IF EXISTS `,sharing_channel`;
+CREATE TABLE `sharing_channel` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `key_` varchar(32) DEFAULT NULL,
   `name` varchar(32) DEFAULT NULL,
@@ -30,18 +30,18 @@ CREATE TABLE `mto_channel` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of mto_channel
+-- Records of sharing_channel
 -- ----------------------------
-INSERT INTO `mto_channel` VALUES ('1', 'banner', 'banner', '1', '', '3');
-INSERT INTO `mto_channel` VALUES ('2', 'blog', '博客', '0', '', '2');
-INSERT INTO `mto_channel` VALUES ('3', 'jotting', '随笔', '0', '', '1');
-INSERT INTO `mto_channel` VALUES ('4', 'share', '分享', '0', '', '0');
+INSERT INTO `sharing_channel` VALUES ('1', 'banner', 'banner', '1', '', '3');
+INSERT INTO `sharing_channel` VALUES ('2', 'blog', '博客', '0', '', '2');
+INSERT INTO `sharing_channel` VALUES ('3', 'jotting', '随笔', '0', '', '1');
+INSERT INTO `sharing_channel` VALUES ('4', 'share', '分享', '0', '', '0');
 
 -- ----------------------------
--- Table structure for mto_options
+-- Table structure for sharing_options
 -- ----------------------------
-DROP TABLE IF EXISTS `mto_options`;
-CREATE TABLE `mto_options` (
+DROP TABLE IF EXISTS `sharing_options`;
+CREATE TABLE `sharing_options` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `key_` varchar(32) DEFAULT NULL,
   `type` int(5) DEFAULT 0,
@@ -50,30 +50,30 @@ CREATE TABLE `mto_options` (
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of mto_options
+-- Records of sharing_options
 -- ----------------------------
-INSERT INTO `mto_options` VALUES ('1', 'site_name', '0', 'Mtons');
-INSERT INTO `mto_options` VALUES ('2', 'site_domain', '0', 'http://sharing.com');
-INSERT INTO `mto_options` VALUES ('3', 'site_keywords', '0', 'sharing,博客,社区');
-INSERT INTO `mto_options` VALUES ('4', 'site_description', '0', 'sharing, 做一个有内涵的技术社区');
-INSERT INTO `mto_options` VALUES ('5', 'site_metas', '0', '');
-INSERT INTO `mto_options` VALUES ('6', 'site_copyright', '0', 'Copyright © sharing');
-INSERT INTO `mto_options` VALUES ('7', 'site_icp', '0', '');
-INSERT INTO `mto_options` VALUES ('8', 'qq_callback', '0', '');
-INSERT INTO `mto_options` VALUES ('9', 'qq_app_id', '0', '');
-INSERT INTO `mto_options` VALUES ('10', 'qq_app_key', '0', '');
-INSERT INTO `mto_options` VALUES ('11', 'weibo_callback', '0', '');
-INSERT INTO `mto_options` VALUES ('12', 'weibo_client_id', '0', '');
-INSERT INTO `mto_options` VALUES ('13', 'weibo_client_sercret', '0', '');
-INSERT INTO `mto_options` VALUES ('14', 'github_callback', '0', '');
-INSERT INTO `mto_options` VALUES ('15', 'github_client_id', '0', '');
-INSERT INTO `mto_options` VALUES ('16', 'github_secret_key', '0', '');
+INSERT INTO `sharing_options` VALUES ('1', 'site_name', '0', 'Sharing');
+INSERT INTO `sharing_options` VALUES ('2', 'site_domain', '0', 'http://sharing.com');
+INSERT INTO `sharing_options` VALUES ('3', 'site_keywords', '0', 'sharing,博客,社区');
+INSERT INTO `sharing_options` VALUES ('4', 'site_description', '0', 'sharing, 做一个有内涵的技术社区');
+INSERT INTO `sharing_options` VALUES ('5', 'site_metas', '0', '');
+INSERT INTO `sharing_options` VALUES ('6', 'site_copyright', '0', 'Copyright © sharing');
+INSERT INTO `sharing_options` VALUES ('7', 'site_icp', '0', '');
+INSERT INTO `sharing_options` VALUES ('8', 'qq_callback', '0', '');
+INSERT INTO `sharing_options` VALUES ('9', 'qq_app_id', '0', '');
+INSERT INTO `sharing_options` VALUES ('10', 'qq_app_key', '0', '');
+INSERT INTO `sharing_options` VALUES ('11', 'weibo_callback', '0', '');
+INSERT INTO `sharing_options` VALUES ('12', 'weibo_client_id', '0', '');
+INSERT INTO `sharing_options` VALUES ('13', 'weibo_client_sercret', '0', '');
+INSERT INTO `sharing_options` VALUES ('14', 'github_callback', '0', '');
+INSERT INTO `sharing_options` VALUES ('15', 'github_client_id', '0', '');
+INSERT INTO `sharing_options` VALUES ('16', 'github_secret_key', '0', '');
 
 -- ----------------------------
--- Table structure for mto_user
+-- Table structure for sharing_user
 -- ----------------------------
-DROP TABLE IF EXISTS `mto_user`;
-CREATE TABLE `mto_user` (
+DROP TABLE IF EXISTS `sharing_user`;
+CREATE TABLE `sharing_user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `username` varchar(32) DEFAULT NULL,
   `name` varchar(32) DEFAULT NULL,
@@ -94,15 +94,15 @@ CREATE TABLE `mto_user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of mto_user
+-- Records of sharing_user
 -- ----------------------------
-INSERT INTO `mto_user` VALUES ('1', 'admin', '小豆丁', 'https://en.gravatar.com/userimage/154673030/b9a54b5b990a61cc074668b2e2a0b8c0.png', 'example@mtons.com', '3TGCQF25BLHU9R7IQUITN0FCC5', '0', '2017-08-06 17:52:41', '2017-07-26 11:08:36', '2017-10-17 13:24:13', '0', '1', '0', '0', '');
+INSERT INTO `sharing_user` VALUES ('1', 'admin', '小豆', 'https://en.gravatar.com/userimage/154673030/b9a54b5b990a61cc074668b2e2a0b8c0.png', 'example@sharing.com', '3TGCQF25BLHU9R7IQUITN0FCC5', '0', '2017-08-06 17:52:41', '2017-07-26 11:08:36', '2017-10-17 13:24:13', '0', '1', '0', '0', '');
 
 -- ----------------------------
--- Table structure for mto_user_oauth
+-- Table structure for sharing_user_oauth
 -- ----------------------------
-DROP TABLE IF EXISTS `mto_user_oauth`;
-CREATE TABLE `mto_user_oauth` (
+DROP TABLE IF EXISTS sharing_user_oauth;
+CREATE TABLE sharing_user_oauth (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) DEFAULT NULL,
   `access_token` varchar(128) DEFAULT NULL,
@@ -115,7 +115,7 @@ CREATE TABLE `mto_user_oauth` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of mto_user_oauth
+-- Records of sharing_user_oauth
 -- ----------------------------
 
 -- ----------------------------
