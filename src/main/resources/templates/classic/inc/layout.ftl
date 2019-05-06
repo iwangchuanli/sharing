@@ -3,28 +3,17 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <!--
-    ------------------------------------------------------
-               .__                 .__
-          _____|  |__ _____ _______|__| ____    ____
-         /  ___/  |  \\__  \\_  __ \  |/    \  / ___\
-         \___ \|   Y  \/ __ \|  | \/  |   |  \/ /_/  >
-        /____  >___|  (____  /__|  |__|___|  /\___  /
-             \/     \/     \/              \//_____/
-    ------------------------------------------------------------
-    version: ${site.version}
-    ------------------------------------------------------------
-    -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--[if IE]>
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'/>
     <![endif]-->
-    <meta name="keywords" content="mtons, ${keywords?default(options['site_keywords'])}">
+    <title>${title?default(options['site_name'])}</title>
+    <meta name="keywords" content=" ${keywords?default(options['site_keywords'])}">
     <meta name="description" content="${description?default(options['site_description'])}">
     ${options['site_metas']}
 
-    <title>${title?default(options['site_name'])}</title>
+
 
     <link href="${base}/dist/vendors/pace/themes/pace-theme-minimal.css" rel="stylesheet"/>
     <link href="${base}/dist/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
