@@ -26,3 +26,38 @@
         main.init();
     });
 </script>
+
+<#--&lt;#&ndash; 鼠标跟随动态线条 &ndash;&gt;
+<script type="text/javascript" src="https://blog-static.cnblogs.com/files/yadongliang/canvas-nest.min.js"></script>
+<canvas height="926" width="1920" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;" id="c_n1"></canvas>-->
+
+<script>
+    /* 鼠标点击特效 */
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("（*@ο@*）", "（⊙o⊙）", "★~★", "(*^‧^*)", "（ˇ＾ˇ〉", "~>_<~+", "(≥◇≤)" ,"（*>.<*）", ">_<|||", "→_→", "└(^o^)┘", " (*^__^*)");
+            var $i = $("<span></tagObj>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "#ff6651"
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function() {
+                    $i.remove();
+                });
+        });
+    });
+</script>

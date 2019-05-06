@@ -1,8 +1,8 @@
 <#include "/default/inc/layout.ftl"/>
 
 <#assign title = view.title + ' - ' + options['site_name'] />
-<#assign keywords = view.keywords?default(options['site_keywords']) />
-<#assign description = view.description?default(options['site_description']) />
+<#assign keywords = view.keywords?default(view.tags+options['site_keywords']) />
+<#assign description = view.description?default(view.summary) />
 
 <@layout title>
 <div class="row main">
@@ -164,6 +164,36 @@
                         data.id, quoto);
                 return item;
             }
+        });
+    });
+</script>
+<script>
+    /* 鼠标点击特效 */
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("（*@ο@*）", "（⊙o⊙）", "★~★", "(*^‧^*)", "（ˇ＾ˇ〉", "~>_<~+", "(≥◇≤)" ,"（*>.<*）", ">_<|||", "→_→", "└(^o^)┘", " (*^__^*)");
+            var $i = $("<span></tagObj>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "#ff6651"
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function() {
+                    $i.remove();
+                });
         });
     });
 </script>

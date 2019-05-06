@@ -4,15 +4,14 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
+    <title>${title?default(options['site_name'])}</title>
+    <meta name="keywords" content=" ${keywords?default(options['site_keywords'])}">
+    <meta name="description" content="${description?default(options['site_description'])}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--[if IE]>
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'/>
     <![endif]-->
-    <title>${title?default(options['site_name'])}</title>
-    <meta name="keywords" content=" ${keywords?default(options['site_keywords'])}">
-    <meta name="description" content="${description?default(options['site_description'])}">
     ${options['site_metas']}
-
 
 
     <link href="${base}/dist/vendors/pace/themes/pace-theme-minimal.css" rel="stylesheet"/>

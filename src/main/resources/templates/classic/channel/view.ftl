@@ -1,8 +1,8 @@
 <#include "/classic/inc/layout.ftl"/>
 
 <#assign title = view.title + ' - ' + options['site_name'] />
-<#assign keywords = view.keywords?default(options['site_keywords']) />
-<#assign description = view.description?default(options['site_description']) />
+<#assign keywords = view.keywords?default(view.tags+options['site_keywords']) />
+<#assign description = view.description?default(view.summary) />
 
 <@layout title>
 <div class="row main">
@@ -171,4 +171,5 @@
     });
 
 </script>
+
 </@layout>
