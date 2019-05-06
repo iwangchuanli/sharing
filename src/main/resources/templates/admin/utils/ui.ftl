@@ -44,8 +44,8 @@
     <!-- Main Header -->
     <header class="main-header">
         <a href="${base}/index" class="logo">
-            <span class="logo-mini">MBG</span>
-            <span class="logo-lg"><b>M</b>BLOG</span>
+            <span class="logo-mini">Sharing</span>
+            <span class="logo-lg"><b>⭐</b>Sharing</span>
         </a>
         <nav class="navbar navbar-static-top">
             <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
