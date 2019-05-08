@@ -6,7 +6,7 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://localhost/db_sharing?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
         username: root
-        password: 123456
+        password: 123456789
     flyway:
         enabled: true
     jpa:

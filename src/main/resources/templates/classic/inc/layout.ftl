@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--[if IE]>
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'/>
+    <meta baidu-gxt-verify-token="98819acda0b9752df0fc5fc2e33a6bff">
     <![endif]-->
     ${options['site_metas']}
 
@@ -37,7 +38,7 @@
     </script>
 
     <script src="${base}/dist/js/sea.js"></script>
-    <script src="${base}/dist/js/sea.config.js"></script>
+    <#--<script src="${base}/dist/js/sea.config.js"></script>-->
 
     <!-- Favicons -->
     <link href="<@resource src=options['site_favicon']/>" rel="apple-touch-icon-precomposed" />
