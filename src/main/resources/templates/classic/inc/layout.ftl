@@ -12,6 +12,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'/>
     <![endif]-->
     <meta baidu-gxt-verify-token="98819acda0b9752df0fc5fc2e33a6bff">
+    <meta name="baidu_union_verify" content="b7bb8667dfc451e4e871211b61bba1fe">
     ${options['site_metas']}
 
 
