@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--[if IE]>
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'/>
-    <meta baidu-gxt-verify-token="98819acda0b9752df0fc5fc2e33a6bff">
     <![endif]-->
+    <meta baidu-gxt-verify-token="98819acda0b9752df0fc5fc2e33a6bff">
     ${options['site_metas']}
 
 
@@ -43,6 +43,16 @@
     <!-- Favicons -->
     <link href="<@resource src=options['site_favicon']/>" rel="apple-touch-icon-precomposed" />
     <link href="<@resource src=options['site_favicon']/>" rel="shortcut icon" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130175650-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-130175650-2');
+    </script>
+
 </head>
 <body>
     <!-- header -->
