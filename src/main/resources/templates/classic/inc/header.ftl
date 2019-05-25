@@ -73,7 +73,7 @@
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="${base}/">
-                    <img src="<@resource src=options['site_logo']/>"/>
+                    <img alt="site_logo" src="<@resource src=options['site_logo']/>"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse">
@@ -88,9 +88,9 @@
 							<a href="${base}/channel/${row.id}" nav="${row.name}">${row.name}</a>
 						</li>
 					</#list>
-                        <li>
+                        <#--<li>
                             <a href="${base}/tags" nav="tags">标签</a>
-                        </li>
+                        </li>-->
                 </ul>
                 <ul class="navbar-button list-inline" id="header_user">
                     <li view="search" class="hidden-xs hidden-sm">
@@ -110,7 +110,7 @@
                     </@controls>
                     <li class="dropdown">
                         <a href="#" class="user dropdown-toggle" data-toggle="dropdown">
-                            <img class="img-circle" src="<@resource src=profile.avatar + '?t=' + .now?time />">
+                            <img alt="user-head" class="img-circle" src="<@resource src=profile.avatar + '?t=' + .now?time />">
                             <span>${profile.name}</span>
                         </a>
                         <ul class="dropdown-menu" role="menu">

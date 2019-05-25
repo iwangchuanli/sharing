@@ -3,13 +3,13 @@
         <div class="footer-row">
             <nav class="footer-nav">
                 <a class="footer-nav-item footer-nav-logo" href="${base}/">
-                    <img src="<@resource src=options['site_logo']/>" alt="mblog"/>
+                    <img src="<@resource src=options['site_logo']/>" alt="site_logo"/>
                 </a>
                 <span class="footer-nav-item">${options['site_copyright']}</span>
                 <span class="footer-nav-item">${options['site_icp']}</span>
             </nav>
             <div class="gh-foot-min-back hidden-xs hidden-sm">
-                <!-- 请保留此处标识-->
+                <#-- 请保留此处标识-->
                 <#--<span class="footer-nav-item">Powered by <a href="https://github.com/wangcl/mblog" target="_blank">mblog</a></span>-->
                 <span class="footer-nav-item">Powered by sharing</span>
             </div>
@@ -32,11 +32,11 @@
 <canvas height="926" width="1920" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;" id="c_n1"></canvas>-->
 
 <script>
-    /* 鼠标点击特效 */
+    /* mouse click */
     var a_idx = 0;
     jQuery(document).ready(function($) {
         $("body").click(function(e) {
-            var a = new Array("（*@ο@*）", "（⊙o⊙）", "★~★", "(*^‧^*)", "（ˇ＾ˇ〉", "~>_<~+", "(≥◇≤)" ,"（*>.<*）", ">_<|||", "→_→", "└(^o^)┘", " (*^__^*)");
+            var a = new Array("富强", "民主", "文明","和谐","自由", "平等","公正","法治","爱国","敬业","诚信","友善,", "☆","★","♥");
             var $i = $("<span></tagObj>").text(a[a_idx]);
             a_idx = (a_idx + 1) % a.length;
             var x = e.pageX,
