@@ -35,4 +35,19 @@ public class IndexController extends BaseController{
 		return view(Views.INDEX);
 	}
 
+	/**
+	 * robots txt
+	 *
+	 * @return
+	 */
+	@GetMapping("/robots.txt")
+	public void robotsTxt(HttpServletResponse response) throws IOException {
+		Writer writer = response.getWriter();
+		String lineSeparator = System.getProperty("line.separator", "\n");
+		writer.append("User-agent: *").append(lineSeparator);
+		writer.append("Disallow:").append("/admin").append(lineSeparator);
+		writer.append("Disallow:").append("/users/").append(lineSeparator);
+		writer.append("Disallow:").append("/tag/").append(lineSeparator);
+	}
+
 }
