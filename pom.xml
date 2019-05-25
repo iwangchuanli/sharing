@@ -310,7 +310,7 @@
 				<configuration>
 					<fork>true</fork>
 					<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
-					<mainClass>com.mtons.mblog.BootApplication</mainClass>
+					<mainClass>com.sharing.BootApplication</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>

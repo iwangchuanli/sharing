@@ -60,7 +60,7 @@
                                         <img src="<@resource src=row.thumbnail/>" style="width: 80px;">
                                     </td>
                                     <td>
-                                        <a href="${base}/post/${row.id}" target="_blank">${row.title}</a>
+                                        <a href="${base}/post/${row.id}.html" target="_blank">${row.title}</a>
                                     </td>
                                     <td>${row.author.username}</td>
                                     <td>${row.created?string('yyyy-MM-dd')}</td>
