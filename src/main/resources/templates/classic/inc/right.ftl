@@ -1,3 +1,4 @@
+
 <div class="panel panel-default widget">
 	<div class="panel-heading">
 		<h3 class="panel-title"><i class="fa fa-area-chart"></i> 热门文章</h3>
@@ -27,6 +28,7 @@
 		</@sidebar>
 	</div>
 </div>
+
 <@controls name="comment">
 <div class="panel panel-default widget">
     <div class="panel-heading">

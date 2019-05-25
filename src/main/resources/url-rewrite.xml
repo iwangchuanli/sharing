@@ -4,7 +4,7 @@
 
 <urlrewrite>
 
-    <!-- 文章界面 -->
+    <!-- 文章界面-->
     <rule>
         <from>^/post/(\w+)\.html$</from>
         <to>/post/$1/</to>

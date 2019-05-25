@@ -29,6 +29,8 @@
     <script src="${base}/dist/vendors/pace/pace.min.js"></script>
 
     <script src="${base}/dist/js/jquery.min.js"></script>
+    <script src="${base}/dist/js/vue.min.js"></script>
+
     <script src="${base}/dist/vendors/layer/layer.js"></script>
     <script src="${base}/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
 
@@ -53,6 +55,24 @@
 
         gtag('config', 'UA-130175650-2');
     </script>
+
+    <style>
+
+        #clock .time {
+            letter-spacing: 0.05em;
+            font-size: 80px;
+            padding: 5px 0;
+        }
+        #clock .date {
+            letter-spacing: 0.1em;
+            font-size: 24px;
+        }
+        #clock .text {
+            letter-spacing: 0.1em;
+            font-size: 12px;
+            padding: 20px 0 0;
+        }
+    </style>
 
 </head>
 <body>

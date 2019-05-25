@@ -10,6 +10,7 @@
 package com.sharing.web.controller.site;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import com.sharing.base.lang.Consts;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,9 @@ import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.sharing.web.controller.BaseController;
+
+import java.io.IOException;
+import java.io.Writer;
 
 /**
  * @author wangcl
@@ -40,11 +44,13 @@ public class IndexController extends BaseController{
 	 *
 	 * @return
 	 */
-	@GetMapping("/robots.txt")
+	@RequestMapping("/robots.txt")
 	public void robotsTxt(HttpServletResponse response) throws IOException {
 		Writer writer = response.getWriter();
 		String lineSeparator = System.getProperty("line.separator", "\n");
 		writer.append("User-agent: *").append(lineSeparator);
+		writer.append("Allow:").append("/post/").append(lineSeparator);
+		writer.append("Allow:").append("/channel/").append(lineSeparator);
 		writer.append("Disallow:").append("/admin").append(lineSeparator);
 		writer.append("Disallow:").append("/users/").append(lineSeparator);
 		writer.append("Disallow:").append("/tag/").append(lineSeparator);

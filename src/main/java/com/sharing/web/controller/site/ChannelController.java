@@ -19,6 +19,7 @@ import com.sharing.web.controller.BaseController;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.ServletRequestUtils;
@@ -70,4 +71,5 @@ public class ChannelController extends BaseController {
 		model.put("view", view);
 		return view(Views.POST_VIEW);
 	}
+
 }
