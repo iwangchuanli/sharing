@@ -37,7 +37,7 @@
     var a_idx = 0;
     jQuery(document).ready(function($) {
         $("body").click(function(e) {
-            var a = new Array("富强", "民主", "文明","和谐","自由", "平等","公正","法治","爱国","敬业","诚信","友善,", "☆","★","♥");
+            var a = new Array("富强", "民主", "文明","和谐","自由", "平等","公正","法治","爱国","敬业","诚信","友善", "☆","★","♥");
             var $i = $("<span></tagObj>").text(a[a_idx]);
             a_idx = (a_idx + 1) % a.length;
             var x = e.pageX,
@@ -72,7 +72,7 @@
         }
     });
 
-    var week = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+    var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
     var timerID = setInterval(updateTime, 1000);
     updateTime();
     function updateTime() {

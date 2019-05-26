@@ -34,6 +34,7 @@
     <script src="${base}/dist/vendors/layer/layer.js"></script>
     <script src="${base}/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
 
+
     <script type="text/javascript">
         var _MTONS = _MTONS || {};
         _MTONS.BASE_PATH = '${base}';
@@ -82,7 +83,7 @@
     </style>
 
 </head>
-<body>
+<body style="background-image: ${base}/images/bg.jpg">
     <!-- header -->
     <#include "/classic/inc/header.ftl"/>
     <!-- /header -->
