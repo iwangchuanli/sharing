@@ -56,31 +56,6 @@
         gtag('config', 'UA-130175650-2');
     </script>
 
-    <style>
-        #clock {
-            font-family: 'Share Tech Mono', monospace;
-            color: #ffffff;
-            text-align: center;
-
-            color: #daf6ff;
-            text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
-        }
-        #clock .time {
-            letter-spacing: 0.05em;
-            font-size: 20px;
-            padding: 5px 0;
-        }
-        #clock .date {
-            letter-spacing: 0.1em;
-            font-size: 20px;
-        }
-        #clock .text {
-            letter-spacing: 0.1em;
-            font-size: 12px;
-            padding: 20px 0 0;
-        }
-
-    </style>
 
 </head>
 <body>

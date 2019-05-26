@@ -19,7 +19,7 @@
 </footer>
 
 <a href="#" class="site-scroll-top">
-    <i class="icon-arrow-up"></i>
+    <i class="fa fa-rocket"></i>
 </a>
 
 <script type="text/javascript">

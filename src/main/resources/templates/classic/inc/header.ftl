@@ -78,14 +78,17 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
+                    <li>
+                        <a href="${base}/"><i class="fa fa-sun-o"></i>首页</a>
+                    </li>
 					<#if profile??>
 						<li data="user">
-							<a href="${base}/users/${profile.id}" nav="user">我的主页</a>
+							<a href="${base}/users/${profile.id}" nav="user"><i class="fa fa-sun-o"></i>我的主页</a>
 						</li>
 					</#if>
 					<#list channels as row>
 						<li>
-							<a href="${base}/channel/${row.id}.html" nav="${row.name}">${row.name}</a>
+							<a href="${base}/channel/${row.id}.html" nav="${row.name}"><i class="fa fa-sun-o"></i>${row.name}</a>
 						</li>
 					</#list>
                         <#--<li>
