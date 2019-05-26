@@ -29,7 +29,7 @@
             <div class="panel-footer operate">
                 <#list view.tagsArray as tag>
                     <span>
-                        <a class="label label-default" href="${base}/tag/${tag}/">#${tag}</a>
+                        <a class="label label-default" href="${base}/tag/${tag}/"><i class="fa fa-tag"></i>${tag}</a>
                     </span>
                 </#list>
             </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="more-box">
                 <a class="btn btn-fulltext" data-toggle="fulltext">
-                    <i class="icon icon-arrow-down" aria-hidden="true"></i> 阅读全部
+                    <i class="fa fa-angle-double-down" aria-hidden="true"></i> 阅读全部
                 </a>
             </div>
         </div>
@@ -50,7 +50,7 @@
         <@controls name="comment">
         <div id="chat" class="chats shadow-box">
             <div class="chat_header">
-                <h4>全部评论: <span id="chat_count">0</span> 条</h4>
+                <h4><i class="fa fa-comments"></i>全部评论: <span id="chat_count">0</span> 条</h4>
             </div>
             <ul id="chat_container" class="its"></ul>
             <div id="pager" class="text-center"></div>
