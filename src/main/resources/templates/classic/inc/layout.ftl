@@ -83,7 +83,7 @@
     </style>
 
 </head>
-<body style="background-image: '${base}/images/bg.jpg';">
+<body>
     <!-- header -->
     <#include "/classic/inc/header.ftl"/>
     <!-- /header -->

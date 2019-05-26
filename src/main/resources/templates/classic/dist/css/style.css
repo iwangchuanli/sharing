@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding-top: 50px;
     background: #f6f6f6;
+    /*background-image: url("bg.jpg");*/
     font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-y: scroll;
