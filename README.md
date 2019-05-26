@@ -1,6 +1,5 @@
-###  开源Java博客系统, 支持多用户, 支持切换主题
+###  Java博客系统, 支持多用户, 支持切换主题
 
-[![Author](https://img.shields.io/badge/author-landy-green.svg?style=flat-square)](http://mtons.com)
 [![JDK](https://img.shields.io/badge/jdk-1.8-green.svg?style=flat-square)](#)
 [![Release](https://img.shields.io/github/release/wangcl/mblog.svg?style=flat-square)](https://github.com/wangcl/mblog)
 [![Docker](https://img.shields.io/docker/automated/wangcl/mblog.svg?style=flat-square)](https://hub.docker.com/r/wangcl/mblog)
@@ -20,8 +19,8 @@
 ### 启动：
  - main方法运行
  ```xml
- 配置：src/main/resources/application-mysql.yml (数据库账号密码)、新建db_mblog的数据库
- 运行：src/main/java/com/mtons/mblog/BootApplication
+ 配置：src/main/resources/application-mysql.yml (数据库账号密码)
+ 运行：src/main/java/com/sharing/BootApplication
  访问：http://localhost:8080/
  后台：http://localhost:8080/admin
  账号：默认管理员账号为 admin/12345
