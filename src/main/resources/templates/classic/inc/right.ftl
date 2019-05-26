@@ -1,4 +1,12 @@
-
+<div class="panel panel-default widget">
+	<div class="panel-heading">
+		<h3 class="panel-title"><i class="fa fa-heartbeat"></i> 时 间</h3>
+	</div>
+	<div id="clock">
+		<p class="date">{{date}}</p>
+		<p class="time">{{time}}</p>
+	</div>
+</div>
 <div class="panel panel-default widget">
 	<div class="panel-heading">
 		<h3 class="panel-title"><i class="fa fa-area-chart"></i> 热门文章</h3>

@@ -13,10 +13,7 @@
                 <#--<span class="footer-nav-item">Powered by <a href="https://github.com/wangcl/mblog" target="_blank">mblog</a></span>-->
                 <span class="footer-nav-item">Powered by sharing</span>
             </div>
-            <div id="clock">
-                <p class="date">{{date}}</p>
-                <p class="time">{{time}}</p>
-            </div>
+
         </div>
     </div>
 </footer>
