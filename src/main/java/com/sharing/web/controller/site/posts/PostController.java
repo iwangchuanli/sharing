@@ -65,6 +65,7 @@ public class PostController extends BaseController {
 	 */
 	@PostMapping("/submit")
 	public String post(PostVO post) {
+
 		Assert.notNull(post, "参数不完整");
 		Assert.state(StringUtils.isNotBlank(post.getTitle()), "标题不能为空");
 		Assert.state(StringUtils.isNotBlank(post.getContent()), "内容不能为空");
@@ -77,7 +78,6 @@ public class PostController extends BaseController {
 			PostVO exist = postService.get(post.getId());
 			Assert.notNull(exist, "文章不存在");
 			Assert.isTrue(exist.getAuthorId() == profile.getId(), "该文章不属于你");
-
 			postService.update(post);
 		} else {
 			postService.post(post);

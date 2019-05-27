@@ -33,6 +33,7 @@
 
     <script src="${base}/dist/vendors/layer/layer.js"></script>
     <script src="${base}/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://wm.lrswl.com/page/?s=299578"></script>
 
 
     <script type="text/javascript">
@@ -56,6 +57,15 @@
         gtag('config', 'UA-130175650-2');
     </script>
 
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?aa4d96db4e86d0400ff30d6f035f9a44";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 
 </head>
 <body>

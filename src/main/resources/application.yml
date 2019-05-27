@@ -6,6 +6,10 @@ server:
         worker-threads: 32
         buffer-size: 1024
         directBuffers: true
+    compression:
+        enabled: true
+        min-response-size: 2048
+        mime-types: application/json,application/xml,text/html,text/xml,text/plain
 spring:
     profiles:
         active: @profileActive@
