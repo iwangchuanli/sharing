@@ -18,9 +18,48 @@
     </div>
 </footer>
 
-<a href="#" class="site-scroll-top">
+<#--<a href="#" class="site-scroll-top">
     <i class="fa fa-rocket"></i>
-</a>
+</a>-->
+<style>
+    #back-top {
+        position: fixed;
+        bottom: 10px;
+        right: 5px;
+        z-index: 99;
+    }
+    #back-top span {
+        width: 150px;
+        height: 174px;
+        display: block;
+        background:url(https://i.loli.net/2018/04/20/5ad9ad7857b27.png)no-repeat center center;
+    }
+    #back-top a{outline:none}
+</style>
+<script type="text/javascript">
+    $(function() {
+        // hide #back-top first
+        $("#back-top").hide();
+        // fade in #back-top
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) {
+                $('#back-top').fadeIn();
+            } else {
+                $('#back-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-top a').click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+</script>
+<p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
+
+
 
 <script type="text/javascript">
     seajs.use('main', function (main) {
@@ -90,7 +129,6 @@
     }
 </script>
 <script type="text/javascript">
-
     carousel(
         $('.carouseldemo'),	//必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
         {
