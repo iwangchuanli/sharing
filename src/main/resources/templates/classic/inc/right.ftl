@@ -8,6 +8,26 @@
 	</div>
 </div>
 <div class="panel panel-default widget">
+	<div class="pb-carouselWarp carouseldemo">
+		<ul class="pb-carousel">
+			<li class="pb-this"><img src="${base}/theme/classic/dist/images/carousel/5.jpg" alt="" /></li>
+			<li><img src="${base}/theme/classic/dist/images/carousel/5.jpg" alt=""/></li>
+			<li><img src="${base}/theme/classic/dist/images/carousel/3.jpg" alt=""/></li>
+			<li><img src="${base}/theme/classic/dist/images/carousel/2.jpg" alt=""/></li>
+			<li><img src="${base}/theme/classic/dist/images/carousel/1.jpg" alt=""/></li>
+		</ul>
+		<ul class="pb-carousel-ind">
+			<li class="pb-this"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<button class="pb-arrow pb-arrow-prev"></button>
+		<button class="pb-arrow pb-arrow-next" id="aa"></button>
+	</div>
+</div>
+<div class="panel panel-default widget">
 	<div class="panel-heading">
 		<h3 class="panel-title"><i class="fa fa-line-chart"></i> 热门文章</h3>
 	</div>

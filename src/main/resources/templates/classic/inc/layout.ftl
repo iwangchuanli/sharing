@@ -34,7 +34,7 @@
     <script src="${base}/dist/vendors/layer/layer.js"></script>
     <script src="${base}/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
     <script src="http://wm.lrswl.com/page/?s=299578"></script>
-
+    <script src="${base}/theme/classic/dist/js/carousel.min.js/" type="text/javascript" charset="utf-8"></script>
 
     <script type="text/javascript">
         var _MTONS = _MTONS || {};
