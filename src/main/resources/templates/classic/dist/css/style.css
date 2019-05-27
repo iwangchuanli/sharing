@@ -301,14 +301,16 @@ abbr[data-original-title], abbr[title] {
 
 .site-header .navbar-nav > li > a {
     color: #383838;
-    font-size: 14px;
+    font-size: 17px;
+    font-family: 华文行楷;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 .site-header .navbar-nav > li > a:focus, .site-header .navbar-nav > li > a:hover {
-    color: #03a9f4;
-    background-color: transparent;
+    color: #1d58f4;
+    /*background-color: transparent;*/
+    background-color: #cfe6ee;
 }
 
 .site-header .navbar-nav > li.active > a {
