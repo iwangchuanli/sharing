@@ -236,7 +236,7 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-
+<!--移除默认的tomcat服务器-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -247,7 +247,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
+<!--添加Undertow服务器-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-undertow</artifactId>
