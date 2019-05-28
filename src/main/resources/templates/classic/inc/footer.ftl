@@ -110,7 +110,6 @@
             date: ''
         }
     });
-
     var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
     var timerID = setInterval(updateTime, 1000);
     updateTime();
@@ -119,7 +118,6 @@
         clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
         clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
     };
-
     function zeroPadding(num, digit) {
         var zero = '';
         for(var i = 0; i < digit; i++) {
@@ -128,9 +126,10 @@
         return (zero + num).slice(-digit);
     }
 </script>
+<script src="${base}/dist/js/carousel.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     carousel(
-        $('.carouseldemo'),	//必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
+        $('#right_carousel'),	//必选， 要轮播模块(id/class/tagname均可)，必须为jQuery元素
         {
             type: 'fade',	//可选，默认左右(leftright) - 'leftright' / 'updown' / 'fade' (左右/上下/渐隐渐现)
             arrowtype: 'move',	//可选，默认一直显示 - 'move' / 'none'	(鼠标移上显示 / 不显示 )

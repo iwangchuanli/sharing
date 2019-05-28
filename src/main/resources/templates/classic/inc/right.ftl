@@ -8,7 +8,7 @@
 	</div>
 </div>
 <div class="panel panel-default widget">
-	<div class="pb-carouselWarp carouseldemo">
+	<div class="pb-carouselWarp carousel" id="right_carousel">
 		<ul class="pb-carousel">
 			<li class="pb-this"><img src="${base}/theme/classic/dist/images/carousel/5.jpg" alt="5" /></li>
 			<li><img src="${base}/theme/classic/dist/images/carousel/4.jpg" alt="4"/></li>

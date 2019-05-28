@@ -1954,7 +1954,7 @@ div.mce-toolbar-grp {
     font-size: 12px;
     padding: 20px 0 0;
 }
-/*images=========*/
+/*images轮播图==============================*/
 .pb-carouselWarp {
     position: relative;
     width: 275px;
@@ -1988,7 +1988,7 @@ div.mce-toolbar-grp {
 .pb-carouselWarp .pb-carousel-ind {
     position: absolute;
     bottom: 10px;
-    left: 25%;
+    left: 45%;
     transform: translateX(-50%);
 }
 .pb-carouselWarp .pb-carousel-ind li {
@@ -1997,7 +1997,7 @@ div.mce-toolbar-grp {
     height: 10px;
     border-radius: 50%;
     background-color: #ccc;
-    margin: 0 5px;
+    margin: 0 2px;
     cursor: pointer;
 }
 .pb-carouselWarp .pb-carousel-ind .pb-this {
