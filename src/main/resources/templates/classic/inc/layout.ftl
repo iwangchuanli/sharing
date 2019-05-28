@@ -26,7 +26,7 @@
         <link href="${base}/dist/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
         <#--进度条pace-->
         <script src="${base}/dist/vendors/pace/pace.min.js"></script>
-        <link href="${base}/dist/vendors/pace/themes/pace-theme-minimal.css" rel="stylesheet"/>
+        <link href="${base}/dist/vendors/pace/themes/pace-theme-bounce.css" rel="stylesheet"/>
         <#--js引入-->
         <script src="${base}/dist/js/jquery.min.js"></script>
         <script src="${base}/dist/js/vue.min.js"></script>
