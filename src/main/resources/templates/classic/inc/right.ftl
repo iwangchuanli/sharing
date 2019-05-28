@@ -31,11 +31,12 @@
 	<div class="panel-heading">
 		<h3 class="panel-title"><i class="fa fa-rocket"></i> 应用</h3>
 	</div>
-	<div align="left">
+	<div class="panel-body">
 		<ul>
-			<li><a href="${base}/app/test.html">app01</a></li>
-			<li><a href="${base}/app/test.html">app02</a></li>
-			<li><a>app03</a></li>
+			<li><i class="fa fa-star-o"></i>&nbsp;<a href="${base}/app/test.html">app_test</a></li>
+			<li><i class="fa fa-star-o"></i>&nbsp;<a href="http://favorites.wangcl.xyz/">云收藏</a></li>
+			<li><i class="fa fa-star-o"></i>&nbsp;<a>私人网盘</a></li>
+			<li><i class="fa fa-star-o"></i>&nbsp;<a>other</a></li>
 		</ul>
 	</div>
 </div>
@@ -47,7 +48,8 @@
 		<@sidebar method="hottest_posts">
 		<ul class="list">
 			<#list results as row>
-            <li>${row_index + 1}. <a href="${base}/post/${row.id}.html">${row.title}</a></li>
+            <#--<li>${row_index + 1}. <a href="${base}/post/${row.id}.html">${row.title}</a></li>-->
+				<li><i class="fa fa-bookmark-o"></i>&nbsp; <a href="${base}/post/${row.id}.html">${row.title}</a></li>
 			</#list>
 		</ul>
 		</@sidebar>
@@ -62,7 +64,7 @@
 		<@sidebar method="latest_posts">
 			<ul class="list">
 				<#list results as row>
-					<li>${row_index + 1}. <a href="${base}/post/${row.id}.html">${row.title}</a></li>
+					<li><i class="fa fa-bookmark-o"></i>&nbsp;  <a href="${base}/post/${row.id}.html">${row.title}</a></li>
 				</#list>
 			</ul>
 		</@sidebar>
@@ -78,7 +80,7 @@
 		<@sidebar method="latest_comments">
 			<ul class="list">
 				<#list results as row>
-					<li><a href="${base}/post/${row.postId}">${row.content}</a></li>
+					<li><i class="fa fa-comment-o"></i>&nbsp;  <a href="${base}/post/${row.postId}">${row.content}</a></li>
 				</#list>
 			</ul>
 		</@sidebar>

@@ -30,10 +30,7 @@
         <#--引入bootstrap-->
         <script src="${base}/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
         <link href="${base}/dist/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-        <#--<script src="http://wm.lrswl.com/page/?s=299578"></script>-->
-        <#--引入sea.js,增强原生JavaScript-->
-        <script src="${base}/dist/js/sea.js"></script>
-        <#--<script src="${base}/dist/js/sea.config.js"></script>-->
+
         <script type="text/javascript">
             var _MTONS = _MTONS || {};
             _MTONS.BASE_PATH = '${base}';
@@ -42,6 +39,9 @@
         <!-- Favicons -->
         <link href="<@resource src=options['site_favicon']/>" rel="apple-touch-icon-precomposed"/>
         <link href="<@resource src=options['site_favicon']/>" rel="shortcut icon"/>
+        <#--引入sea.js,增强原生JavaScript-->
+        <script src="${base}/dist/js/sea.js"></script>
+        <#--<script src="${base}/dist/js/sea.config.js"></script>-->
         <!-- 谷歌分析Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130175650-2"></script>
         <script>
@@ -64,6 +64,7 @@
                 s.parentNode.insertBefore(hm, s);
             })();
         </script>
+        <#--<script src="http://wm.lrswl.com/page/?s=299578"></script>-->
     </head>
     <body>
     <!-- header -->

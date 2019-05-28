@@ -99,7 +99,7 @@
                     <li view="search" class="hidden-xs hidden-sm">
                         <form method="GET" action="${base}/search" accept-charset="UTF-8" class="navbar-form navbar-left">
                             <div class="form-group">
-                                <input class="form-control search-input mac-style" placeholder=" 搜索 从这里开始..." name="kw" type="text" value="${kw}" style="background: #F9F0DA;">
+                                <input class="form-control search-input mac-style" placeholder=" 搜索 " name="kw" type="text" value="${kw}" style="background: #F9F0DA;">
                                 <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
                                 <#--<div class="search d7">
                                     <form>

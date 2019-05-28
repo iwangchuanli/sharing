@@ -26,7 +26,7 @@ public class SidebarDirective extends TemplateDirective {
 
     @Override
     public void execute(DirectiveHandler handler) throws Exception {
-        int size = handler.getInteger("size", 6);
+        int size = handler.getInteger("size", 9);
         String method = handler.getString("method", "post_latests");
         switch (method) {
             case "latest_posts":

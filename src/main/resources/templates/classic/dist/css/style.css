@@ -416,7 +416,7 @@ abbr[data-original-title], abbr[title] {
     color: #969696;
 }
 
-.site-header .navbar-form .mac-style:focus {
+.site-header .navbar-form .mac-style:hover {
     width: 160px;
     background-color: #fafafa;
 }
@@ -1957,7 +1957,7 @@ div.mce-toolbar-grp {
 /*images轮播图==============================*/
 .pb-carouselWarp {
     position: relative;
-    width: 275px;
+    width: 260px;
     height: 150px;
     overflow: hidden;
     margin-left: auto;
