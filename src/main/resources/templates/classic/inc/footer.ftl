@@ -21,6 +21,7 @@
 <#--<a href="#" class="site-scroll-top">
     <i class="fa fa-rocket"></i>
 </a>-->
+<#--回到顶部-->
 <style>
     #back-top {
         position: fixed;
@@ -60,7 +61,7 @@
 <p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
 
 
-
+<#--进度条pace.js初始化-->
 <script type="text/javascript">
     seajs.use('main', function (main) {
         main.init();
@@ -70,7 +71,7 @@
 <#--&lt;#&ndash; 鼠标跟随动态线条 &ndash;&gt;
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/yadongliang/canvas-nest.min.js"></script>
 <canvas height="926" width="1920" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;" id="c_n1"></canvas>-->
-
+<#--鼠标点击特效-->
 <script>
     /* mouse click */
     var a_idx = 0;
@@ -101,7 +102,7 @@
         });
     });
 </script>
-
+<#--时钟控制-->
 <script>
     var clock = new Vue({
         el: '#clock',
@@ -126,6 +127,7 @@
         return (zero + num).slice(-digit);
     }
 </script>
+<#--轮播图控制-->
 <script src="${base}/dist/js/carousel.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     carousel(

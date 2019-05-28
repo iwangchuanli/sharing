@@ -14,14 +14,10 @@
         <meta baidu-gxt-verify-token="98819acda0b9752df0fc5fc2e33a6bff">
         <meta name="baidu_union_verify" content="b7bb8667dfc451e4e871211b61bba1fe">
         ${options['site_metas']}
-
-
-        <link href="${base}/dist/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-
         <link href="${base}/dist/css/editor.css" rel="stylesheet"/>
         <link href="${base}/dist/css/plugins.css" rel="stylesheet"/>
         <link href="${base}/theme/classic/dist/css/style.css" rel="stylesheet"/>
-
+        <#--图标库icon fa 的引入-->
         <link href="${base}/dist/vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet"/>
         <link href="${base}/dist/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
         <#--进度条pace-->
@@ -31,22 +27,22 @@
         <script src="${base}/dist/js/jquery.min.js"></script>
         <script src="${base}/dist/js/vue.min.js"></script>
         <script src="${base}/dist/vendors/layer/layer.js"></script>
+        <#--引入bootstrap-->
         <script src="${base}/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <link href="${base}/dist/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
         <#--<script src="http://wm.lrswl.com/page/?s=299578"></script>-->
-
+        <#--引入sea.js,增强原生JavaScript-->
+        <script src="${base}/dist/js/sea.js"></script>
+        <#--<script src="${base}/dist/js/sea.config.js"></script>-->
         <script type="text/javascript">
             var _MTONS = _MTONS || {};
             _MTONS.BASE_PATH = '${base}';
             _MTONS.LOGIN_TOKEN = '${profile.id}';
         </script>
-
-        <script src="${base}/dist/js/sea.js"></script>
-        <#--<script src="${base}/dist/js/sea.config.js"></script>-->
-
         <!-- Favicons -->
         <link href="<@resource src=options['site_favicon']/>" rel="apple-touch-icon-precomposed"/>
         <link href="<@resource src=options['site_favicon']/>" rel="shortcut icon"/>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- 谷歌分析Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130175650-2"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -58,7 +54,7 @@
             gtag('js', new Date());
             gtag('config', 'UA-130175650-2');
         </script>
-
+        <#--百度分析-->
         <script>
             var _hmt = _hmt || [];
             (function () {
@@ -68,7 +64,6 @@
                 s.parentNode.insertBefore(hm, s);
             })();
         </script>
-
     </head>
     <body>
     <!-- header -->
