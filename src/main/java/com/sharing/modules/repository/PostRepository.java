@@ -43,4 +43,7 @@ public interface PostRepository extends JpaRepository<Post, Long>, JpaSpecificat
     @Query(value = "select id,created,thumbnail,title,views from Post")
     List<Object[]> queryAllPost();
 
+    @Query(nativeQuery = true, value = "SELECT id from sharing_post order by id desc limit 1 ")
+    long getLastPost();
+
 }

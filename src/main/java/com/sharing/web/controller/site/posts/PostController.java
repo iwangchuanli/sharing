@@ -31,6 +31,7 @@ public class PostController extends BaseController {
 	@Autowired
 	private ChannelService channelService;
 
+
 	/**
 	 * 发布文章页
 	 * @return

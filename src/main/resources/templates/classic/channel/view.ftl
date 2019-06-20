@@ -48,7 +48,10 @@
                 </div>
             </div>
             <div class="panel panel-default padding-md">
-                上一篇：
+                <span>上一篇：<a href="/post/${adjacent[0].id}.html" title="${adjacent[0].title}">${adjacent[0].title}</a>
+                </span>
+                <span>下一篇：<a href="/post/${adjacent[1].id}.html" title="${adjacent[1].title}">${adjacent[1].title}</a>
+                </span>
             </div>
             <!-- relevant -->
             <div class="panel panel-default padding-md">
@@ -141,6 +144,7 @@
     </li>
 
 
+
     </script>
 
     <script type="text/javascript">
@@ -186,7 +190,8 @@
     </script>
     <script>
         $(document).ready(function () {
-            alert("jquery");
+            <#--alert(${view.id});-->
+            <#--alert(${adjacent[0].title});-->
         });
     </script>
 </@layout>

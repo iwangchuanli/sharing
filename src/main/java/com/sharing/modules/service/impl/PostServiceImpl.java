@@ -76,6 +76,8 @@ public class PostServiceImpl implements PostService {
     @Autowired
     private ResourceRepository resourceRepository;
 
+
+
     @Override
     public String createSiteMapXmlContent() {
         String baseUrl = "http://www.wangcl.xyz/";

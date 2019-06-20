@@ -31,11 +31,6 @@ import java.util.Set;
 @CacheConfig(cacheNames = Consts.CACHE_USER)
 public interface PostService {
 
-    /*
-     * 查询上一篇文章、下一篇文章prev next
-     *@param id
-     * */
-    List<Object[]> getAdjacentPost(int id);
 
     /*
      * 文章站点地图
