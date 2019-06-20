@@ -14,6 +14,11 @@ server:
         enabled: true
         min-response-size: 2048
         mime-types: application/json,application/xml,text/html,text/xml,text/plain
+    servlet:
+      session:
+        tracking-modes: cookie
+        cookie:
+          http-only: true
 spring:
     profiles:
         active: @profileActive@

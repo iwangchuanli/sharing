@@ -4,9 +4,9 @@ spring:
         #continue-on-error: false
         #sql-script-encoding: utf-8
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/db_sharing?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
-        username: root
-        password: 123456789 #Wangabc123
+        url: jdbc:mysql://rm-uf6n8p5878apa7fargo.mysql.rds.aliyuncs.com:3306/db_sharing?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+        username: root_sharing
+        password: Abc123456 #Wangabc123
     flyway:
         enabled: true
     jpa:

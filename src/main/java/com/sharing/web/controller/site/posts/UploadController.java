@@ -11,6 +11,9 @@ package com.sharing.web.controller.site.posts;
 
 import com.sharing.base.lang.Consts;
 import com.sharing.base.utils.FileKit;
+import com.sharing.base.utils.FilePathUtils;
+import com.sharing.base.utils.ImageUtils;
+import com.sharing.modules.data.AccountProfile;
 import com.sharing.web.controller.BaseController;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -54,7 +57,7 @@ public class UploadController extends BaseController {
         UploadResult result = new UploadResult();
         String crop = request.getParameter("crop");
         int size = ServletRequestUtils.getIntParameter(request, "size", siteOptions.getIntegerValue(Consts.STORAGE_MAX_WIDTH));
-
+        AccountProfile profile = getProfile();
         // 检查空
         if (null == file || file.isEmpty()) {
             return result.error(errorInfo.get("NOFILE"));
@@ -79,11 +82,21 @@ public class UploadController extends BaseController {
         // 保存图片
         try {
             String path;
+//            if (StringUtils.isNotBlank(crop)) {
+//                Integer[] imageSize = siteOptions.getIntegerArrayValue(crop, Consts.SEPARATOR_X);
+//                int width = ServletRequestUtils.getIntParameter(request, "width", imageSize[0]);
+//                int height = ServletRequestUtils.getIntParameter(request, "height", imageSize[1]);
+//                path = storageFactory.get().storeScale(file, Consts.thumbnailPath, width, height);
+//            } else {
+//                path = storageFactory.get().storeScale(file, Consts.thumbnailPath, size);
+//            }
             if (StringUtils.isNotBlank(crop)) {
                 Integer[] imageSize = siteOptions.getIntegerArrayValue(crop, Consts.SEPARATOR_X);
                 int width = ServletRequestUtils.getIntParameter(request, "width", imageSize[0]);
                 int height = ServletRequestUtils.getIntParameter(request, "height", imageSize[1]);
-                path = storageFactory.get().storeScale(file, Consts.thumbnailPath, width, height);
+                byte[] bytes = ImageUtils.screenshot(file, width, height);
+                String filepathandName = Consts.thumbnailPath + getAvaPath(profile.getId(), 240);
+                path = storageFactory.get().writeToStore(bytes,filepathandName);
             } else {
                 path = storageFactory.get().storeScale(file, Consts.thumbnailPath, size);
             }
@@ -91,13 +104,17 @@ public class UploadController extends BaseController {
             result.setName(fileName);
             result.setPath(path);
             result.setSize(file.getSize());
-
         } catch (Exception e) {
             result.error(errorInfo.get("UNKNOWN"));
             e.printStackTrace();
         }
 
         return result;
+    }
+
+    private String getAvaPath(long uid, int size) {
+        String base = FilePathUtils.getAvatar(uid);
+        return String.format("/%s_%d.jpg", base, size);
     }
 
     public static class UploadResult {
