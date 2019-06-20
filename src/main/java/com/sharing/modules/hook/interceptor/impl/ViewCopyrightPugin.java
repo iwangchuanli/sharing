@@ -34,7 +34,7 @@ public class ViewCopyrightPugin extends InterceptorHookSupport {
         if (null == editing && ret != null) {
             String content = ret.getContent();
             if (!content.contains("sharing网络资源分享，如有侵权，请联系作者。")) {
-                content += "<br/><p class=\"copyright\">sharing  网络资源分享</p>";
+                content += "<br/><p class=\"copyright\" text-align=\"center\">❤-❤</p>";
                 ret.setContent(content);
             }
         }

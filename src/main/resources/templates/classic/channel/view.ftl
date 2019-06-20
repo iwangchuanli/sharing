@@ -47,7 +47,14 @@
                     </a>
                 </div>
             </div>
+            <div class="panel panel-default padding-md">
+                上一篇：
+            </div>
+            <!-- relevant -->
+            <div class="panel panel-default padding-md">
+                相关推荐：
 
+            </div>
             <!-- Comments -->
             <@controls name="comment">
                 <div id="chat" class="chats shadow-box">
@@ -80,6 +87,7 @@
                     </div>
                 </div>
             </@controls>
+
             <!-- /view show -->
         </div>
         <div class="col-xs-12 col-md-3 side-right hidden-xs hidden-sm">
@@ -132,6 +140,7 @@
         <div class="chat_reply"></div>
     </li>
 
+
     </script>
 
     <script type="text/javascript">
@@ -175,5 +184,9 @@
         });
 
     </script>
-
+    <script>
+        $(document).ready(function () {
+            alert("jquery");
+        });
+    </script>
 </@layout>

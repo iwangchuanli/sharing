@@ -1,6 +1,6 @@
 /*
 +--------------------------------------------------------------------------
-|   Mblog [#RELEASE_VERSION#]
+|   Sharing [#RELEASE_VERSION#]
 |   ========================================
 |   Copyright (c) 2014, 2015 sharing. All Rights Reserved
 |   http://www.sharing.com
