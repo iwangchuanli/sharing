@@ -10,6 +10,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 /**
  * @author wangcl
  */
@@ -37,5 +39,8 @@ public interface PostRepository extends JpaRepository<Post, Long>, JpaSpecificat
     @Modifying
     @Query("update Post set comments = comments + :increment where id = :id")
     void updateComments(@Param("id") long id, @Param("increment") int increment);
+
+    @Query(value = "select id,created,thumbnail,title,views from Post")
+    List<Object[]> queryAllPost();
 
 }

@@ -29,6 +29,11 @@ import java.util.Set;
  */
 @CacheConfig(cacheNames = Consts.CACHE_USER)
 public interface PostService {
+
+	/*
+	* 文章站点地图
+	* */
+	String createSiteMapXmlContent();
 	/**
 	 * 分页查询所有文章
 	 * 

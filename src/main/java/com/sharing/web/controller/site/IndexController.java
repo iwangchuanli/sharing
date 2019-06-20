@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.sharing.base.lang.Consts;
+import com.sharing.modules.service.PostService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.ServletRequestUtils;
@@ -29,7 +32,10 @@ import java.io.Writer;
  */
 @Controller
 public class IndexController extends BaseController{
-	
+	@Autowired
+	private PostService postService;
+
+
 	@RequestMapping(value= {"/", "/index"})
 	public String root(ModelMap model, HttpServletRequest request) {
 		String order = ServletRequestUtils.getStringParameter(request, "order", Consts.order.NEWEST);
@@ -56,6 +62,18 @@ public class IndexController extends BaseController{
 		writer.append("Disallow:").append("/users/").append(lineSeparator);
 		writer.append("Disallow:").append("/tag/").append(lineSeparator);
 		writer.append("Disallow:").append("/oauth/").append(lineSeparator);
+	}
+
+	/**
+	 * site map
+	 *
+	 * @return
+	 */
+	@RequestMapping("/sitemap.xml")
+	public void createSiteMapXml(HttpServletResponse response) throws IOException {
+		response.setContentType(MediaType.APPLICATION_XML_VALUE);
+		Writer writer = response.getWriter();
+		writer.append(postService.createSiteMapXmlContent());
 	}
 
 }
