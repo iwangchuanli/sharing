@@ -99,12 +99,16 @@ public class PostSearchServiceImpl implements PostSearchService {
         if (tags.length() > 1) {
             List returnList = new ArrayList();
             List mid_list = new ArrayList();
+            List id_remem = new ArrayList();
             Random rand = new Random();
             List<String> tagList = Arrays.asList(tags.split(","));
             for (String tag : tagList) {
                 if (tag.length() > 0) {
                     for (Object[] obj : postRepository.queryPostByTag(tag)) {
-                        mid_list.add(obj);
+                        if (!id_remem.contains(obj[0])) {
+                            mid_list.add(obj);
+                            id_remem.add(obj[0]);
+                        }
                     }
                 }
             }
@@ -120,7 +124,7 @@ public class PostSearchServiceImpl implements PostSearchService {
                         break;
                     }
                 }
-            }else{
+            } else {
                 return mid_list;
             }
             return returnList;
