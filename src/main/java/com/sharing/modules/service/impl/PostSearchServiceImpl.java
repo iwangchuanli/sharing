@@ -4,6 +4,7 @@ import com.sharing.modules.aspect.PostStatusFilter;
 import com.sharing.modules.data.PostVO;
 import com.sharing.modules.data.UserVO;
 import com.sharing.modules.entity.Post;
+import com.sharing.modules.repository.PostRepository;
 import com.sharing.modules.service.PostSearchService;
 import com.sharing.modules.service.UserService;
 import com.sharing.base.utils.BeanMapUtils;
@@ -26,9 +27,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -45,6 +44,8 @@ public class PostSearchServiceImpl implements PostSearchService {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private PostRepository postRepository;
 
     @Override
     @PostStatusFilter
@@ -94,10 +95,45 @@ public class PostSearchServiceImpl implements PostSearchService {
     }
 
     @Override
+    public List<Object[]> relevant(String tags) {
+        if (tags.length() > 1) {
+            List returnList = new ArrayList();
+            List mid_list = new ArrayList();
+            Random rand = new Random();
+            List<String> tagList = Arrays.asList(tags.split(","));
+            for (String tag : tagList) {
+                if (tag.length() > 0) {
+                    for (Object[] obj : postRepository.queryPostByTag(tag)) {
+                        mid_list.add(obj);
+                    }
+                }
+            }
+            if (mid_list.size() > 10) {
+                Object obj = new Object();
+                int tempIndex;
+                for (int i = 0; i < 10; i++) {
+                    tempIndex = rand.nextInt(mid_list.size());
+                    obj = mid_list.get(tempIndex);
+                    mid_list.remove(tempIndex);
+                    returnList.add(obj);
+                    if (mid_list.size() == 0) {
+                        break;
+                    }
+                }
+            }else{
+                return mid_list;
+            }
+            return returnList;
+        }
+        return null;
+    }
+
+    @Override
     public void resetIndexes() {
         FullTextEntityManager fullTextEntityManager = Search.getFullTextEntityManager(entityManager);
         fullTextEntityManager.createIndexer(Post.class).start();
     }
+
 
     private void buildUsers(List<PostVO> list) {
         if (null == list) {

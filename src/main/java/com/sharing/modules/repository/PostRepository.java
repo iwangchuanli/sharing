@@ -46,4 +46,7 @@ public interface PostRepository extends JpaRepository<Post, Long>, JpaSpecificat
     @Query(nativeQuery = true, value = "SELECT id from sharing_post order by id desc limit 1 ")
     long getLastPost();
 
+    @Query("select id,title from Post where title like CONCAT('%',:tag,'%')")
+    List<Object[]> queryPostByTag(@Param("tag") String tag);
+
 }

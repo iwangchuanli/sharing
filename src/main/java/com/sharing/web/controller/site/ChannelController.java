@@ -15,6 +15,7 @@ import com.sharing.modules.data.PostVO;
 import com.sharing.modules.entity.Channel;
 import com.sharing.modules.repository.PostRepository;
 import com.sharing.modules.service.ChannelService;
+import com.sharing.modules.service.PostSearchService;
 import com.sharing.modules.service.PostService;
 import com.sharing.web.controller.BaseController;
 import org.springframework.beans.BeanUtils;
@@ -29,6 +30,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -42,6 +44,8 @@ public class ChannelController extends BaseController {
     private ChannelService channelService;
     @Autowired
     private PostService postService;
+    @Autowired
+    private PostSearchService postSearchService;
     @Autowired
     private PostRepository postRepository;
 
@@ -97,12 +101,14 @@ public class ChannelController extends BaseController {
             }
             next_id++;
         }
-
         List list = new ArrayList();
         list.add(prevP);
         list.add(nextP);
+
+        List<Object[]> relevant = postSearchService.relevant(view.getTags());
         model.put("view", view);
         model.put("adjacent", list);
+        model.put("revelant", relevant);
         return view(Views.POST_VIEW);
     }
 

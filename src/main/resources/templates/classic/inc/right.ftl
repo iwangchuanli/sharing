@@ -49,7 +49,7 @@
 		<ul class="list">
 			<#list results as row>
             <#--<li>${row_index + 1}. <a href="${base}/post/${row.id}.html">${row.title}</a></li>-->
-				<li><i class="fa fa-bookmark-o"></i>&nbsp; <a href="${base}/post/${row.id}.html">${row.title}</a></li>
+				<li><i class="fa fa-bookmark-o"></i>&nbsp; <a class="hosttest_post_a" href="${base}/post/${row.id}.html">${row.title}</a></li>
 			</#list>
 		</ul>
 		</@sidebar>

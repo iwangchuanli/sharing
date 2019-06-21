@@ -56,6 +56,17 @@
             <!-- relevant -->
             <div class="panel panel-default padding-md">
                 相关推荐：
+                <#if revelant??>
+                    <#list revelant as reve>
+                        <span>
+                        <a href="${base}/post/${reve[0]}.html">${reve[1]}</a>
+                    </span>
+                    </#list>
+                <#else>
+                    <span>
+                        <a href="${base}/post/${view.id}.html">无</a>
+                    </span>
+                </#if>
 
             </div>
             <!-- Comments -->
@@ -145,6 +156,9 @@
 
 
 
+
+
+
     </script>
 
     <script type="text/javascript">
@@ -187,11 +201,5 @@
             });
         });
 
-    </script>
-    <script>
-        $(document).ready(function () {
-            <#--alert(${view.id});-->
-            <#--alert(${adjacent[0].title});-->
-        });
     </script>
 </@layout>

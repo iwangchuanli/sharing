@@ -44,5 +44,6 @@ public class SearchController extends BaseController {
 		model.put("kw", kw);
 		return view(Views.SEARCH);
 	}
+
 	
 }

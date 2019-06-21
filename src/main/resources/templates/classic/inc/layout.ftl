@@ -43,17 +43,6 @@
         <script src="${base}/dist/js/sea.js"></script>
         <#--<script src="${base}/dist/js/sea.config.js"></script>-->
         <!-- 谷歌分析Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130175650-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
-            gtag('js', new Date());
-            gtag('config', 'UA-130175650-2');
-        </script>
         <#--百度分析-->
         <script>
             var _hmt = _hmt || [];
