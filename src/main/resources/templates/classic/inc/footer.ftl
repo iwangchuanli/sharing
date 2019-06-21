@@ -144,13 +144,33 @@
         }
     );
 </script>
+
 <script>
     $(document).ready(function () {
-        $(".hosttest_post_a").hover(function () {
-                alert('hover');
-                alert($(this).prev()['class'])
+        <#-- right 热门文章、最新文章、新评论 jquery特效 -->
+        $(".hosttest_post_a").hover(
+            function () {
+                $(this).prev().attr('class', 'fa fa-flag');
+            },
+            function () {
+                $(this).prev().attr('class', 'fa fa-flag-o');
             }
         );
-
+        $(".new_public_a").hover(
+            function () {
+                $(this).prev().attr('class', 'fa fa-paper-plane');
+            },
+            function () {
+                $(this).prev().attr('class', 'fa fa-paper-plane-o');
+            }
+        );
+        $(".new_comment_a").hover(
+            function () {
+                $(this).prev().attr('class', 'fa fa-commenting');
+            },
+            function () {
+                $(this).prev().attr('class', 'fa fa-commenting-o');
+            }
+        );
     });
 </script>

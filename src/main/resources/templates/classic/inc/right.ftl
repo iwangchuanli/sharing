@@ -49,7 +49,7 @@
 		<ul class="list">
 			<#list results as row>
             <#--<li>${row_index + 1}. <a href="${base}/post/${row.id}.html">${row.title}</a></li>-->
-				<li><i class="fa fa-bookmark-o"></i>&nbsp; <a class="hosttest_post_a" href="${base}/post/${row.id}.html">${row.title}</a></li>
+				<li><i class="fa fa-flag-o"></i>&nbsp; <a class="hosttest_post_a" href="${base}/post/${row.id}.html">${row.title}</a></li>
 			</#list>
 		</ul>
 		</@sidebar>
@@ -64,7 +64,7 @@
 		<@sidebar method="latest_posts">
 			<ul class="list">
 				<#list results as row>
-					<li><i class="fa fa-bookmark-o"></i>&nbsp;  <a href="${base}/post/${row.id}.html">${row.title}</a></li>
+					<li><i class="fa fa-paper-plane-o"></i>&nbsp;  <a class="new_public_a" href="${base}/post/${row.id}.html">${row.title}</a></li>
 				</#list>
 			</ul>
 		</@sidebar>
@@ -80,7 +80,7 @@
 		<@sidebar method="latest_comments">
 			<ul class="list">
 				<#list results as row>
-					<li><i class="fa fa-comment-o"></i>&nbsp;  <a href="${base}/post/${row.postId}">${row.content}</a></li>
+					<li><i class="fa fa-commenting-o"></i>&nbsp;  <a class="new_comment_a" href="${base}/post/${row.postId}">${row.content}</a></li>
 				</#list>
 			</ul>
 		</@sidebar>
