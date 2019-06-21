@@ -573,7 +573,7 @@
           pointer = tail;
         }
         var mark = buffer[(size + pointer) % size];
-        // skip marks that are temporarily removed from text buffer
+        // skin marks that are temporarily removed from text buffer
         if (mark && !mark.find()) {
           var inc = offset > 0 ? 1 : -1;
           var newCur;
@@ -581,7 +581,7 @@
           do {
             pointer += inc;
             mark = buffer[(size + pointer) % size];
-            // skip marks that are the same as current position
+            // skin marks that are the same as current position
             if (mark &&
                 (newCur = mark.find()) &&
                 !cursorEqual(oldCur, newCur)) {
@@ -3675,7 +3675,7 @@
 
         var skip_empty_lines = (curr.line === "");
 
-        // Move one step to skip character we start on
+        // Move one step to skin character we start on
         nextChar(cm, curr);
 
         while (curr.line !== null) {
@@ -3736,7 +3736,7 @@
 
         var skip_empty_lines = (curr.line === "");
 
-        // Move one step to skip character we start on
+        // Move one step to skin character we start on
         nextChar(cm, curr);
 
         while (curr.line !== null) {
@@ -4195,7 +4195,7 @@
           var match = stream.match(query, false);
           if (match) {
             if (match[0].length == 0) {
-              // Matched empty string, skip to next.
+              // Matched empty string, skin to next.
               stream.next();
               return 'searching';
             }
@@ -5035,7 +5035,7 @@
         searchCursor.replace(newText);
       }
       function next() {
-        // The below only loops to skip over multiple occurrences on the same
+        // The below only loops to skin over multiple occurrences on the same
         // line when 'global' is not true.
         while(searchCursor.findNext() &&
               isInRange(searchCursor.from(), lineStart, lineEnd)) {

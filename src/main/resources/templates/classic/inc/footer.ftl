@@ -15,30 +15,10 @@
         </div>
     </div>
 </footer>
-
 <#--<a href="#" class="site-scroll-top">
     <i class="fa fa-rocket"></i>
 </a>-->
 <#--回到顶部-->
-<style>
-    #back-top {
-        position: fixed;
-        bottom: 10px;
-        right: 5px;
-        z-index: 99;
-    }
-
-    #back-top span {
-        width: 150px;
-        height: 174px;
-        display: block;
-        background: url(https://i.loli.net/2018/04/20/5ad9ad7857b27.png) no-repeat center center;
-    }
-
-    #back-top a {
-        outline: none
-    }
-</style>
 <script type="text/javascript">
     $(function () {
         // hide #back-top first
@@ -61,9 +41,25 @@
     });
 </script>
 <p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
-
-
-<#--进度条pace.js初始化-->
+<script type="text/javascript">
+    var _MTONS = _MTONS || {};
+    _MTONS.BASE_PATH = '${base}';
+    _MTONS.LOGIN_TOKEN = '${profile.id}';
+</script>
+<#--百度分析-->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?aa4d96db4e86d0400ff30d6f035f9a44";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<#--引入sea.js,增强原生JavaScript-->
+<script src="${base}/dist/js/sea.js"></script>
+<#--进度条pace.js初始化--进度条pace---->
+<script src="${base}/dist/vendors/pace/pace.min.js"></script>
 <script type="text/javascript">
     seajs.use('main', function (main) {
         main.init();
