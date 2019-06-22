@@ -15,6 +15,8 @@
 
             <div class="form-group">
                 <input type="text" class="form-control" name="title" maxlength="128" value="${view.title}" placeholder="请输入标题" required>
+                <br/>
+                <input type="text" class="form-control" name="summary" maxlength="128" value="${view.summary}" placeholder="请输入介绍" required>
             </div>
             <div class="form-group">
                 <#include "/classic/channel/editor/${editor}.ftl"/>

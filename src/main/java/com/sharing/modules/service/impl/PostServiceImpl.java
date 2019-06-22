@@ -77,7 +77,6 @@ public class PostServiceImpl implements PostService {
     private ResourceRepository resourceRepository;
 
 
-
     @Override
     public String createSiteMapXmlContent() {
         String baseUrl = "http://www.wangcl.xyz/";
@@ -97,7 +96,7 @@ public class PostServiceImpl implements PostService {
 
             // 动态添加 url
             for (Object[] post : posts) {
-                WebSitemapUrl tmpUrl = new WebSitemapUrl.Options(baseUrl + "/post/" + post[0]+".html")
+                WebSitemapUrl tmpUrl = new WebSitemapUrl.Options(baseUrl + "/post/" + post[0] + ".html")
                         .lastMod(String.valueOf(post[1])).priority(0.9).changeFreq(ChangeFreq.DAILY).build();
                 wsg.addUrl(tmpUrl);
             }
@@ -202,11 +201,11 @@ public class PostServiceImpl implements PostService {
         po.setStatus(post.getStatus());
 
         // 处理摘要
-        if (StringUtils.isBlank(post.getSummary())) {
-            po.setSummary(trimSummary(post.getEditor(), post.getContent()));
-        } else {
-            po.setSummary(post.getSummary());
-        }
+//        if (StringUtils.isBlank(post.getSummary())) {
+//            po.setSummary(trimSummary(post.getEditor(), post.getContent()));
+//        } else {
+//            po.setSummary(post.getSummary());
+//        }
 
         postRepository.save(po);
         tagService.batchUpdate(po.getTags(), po.getId());
@@ -267,13 +266,13 @@ public class PostServiceImpl implements PostService {
                     po.setChannelId(p.getChannelId());
                     po.setThumbnail(p.getThumbnail());
                     po.setStatus(p.getStatus());
-
-                    // 处理摘要
-                    if (StringUtils.isBlank(p.getSummary())) {
-                        po.setSummary(trimSummary(p.getEditor(), p.getContent()));
-                    } else {
-                        po.setSummary(p.getSummary());
-                    }
+                    po.setSummary(p.getSummary());
+//                    // 处理摘要
+//                    if (StringUtils.isBlank(p.getSummary())) {
+//                        po.setSummary(trimSummary(p.getEditor(), p.getContent()));
+//                    } else {
+//                        po.setSummary(p.getSummary());
+//                    }
 
                     po.setTags(p.getTags());//标签
 
