@@ -46,6 +46,7 @@
                     </select>
                 </div>
             </div>
+            <#-- 分类category -->
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">标签(用逗号或空格分隔)</h3>
