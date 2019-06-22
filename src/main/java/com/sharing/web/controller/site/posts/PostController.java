@@ -9,6 +9,7 @@ import com.sharing.modules.data.AccountProfile;
 import com.sharing.modules.data.PostVO;
 import com.sharing.modules.entity.Category;
 import com.sharing.modules.repository.CategoryRepository;
+import com.sharing.modules.service.CategoryService;
 import com.sharing.modules.service.ChannelService;
 import com.sharing.modules.service.PostService;
 import com.sharing.web.controller.BaseController;
@@ -36,7 +37,7 @@ public class PostController extends BaseController {
     @Autowired
     private ChannelService channelService;
     @Autowired
-    private CategoryRepository categoryRepository;
+    private CategoryService categoryService;
 
     /**
      * 发布文章页
@@ -45,14 +46,8 @@ public class PostController extends BaseController {
     @GetMapping("/editing")
     public String view(Long id, ModelMap model) {
         model.put("channels", channelService.findAll(Consts.STATUS_NORMAL));//添加栏目信息
-        List<Object> category = new ArrayList();
-        for (Object[] obj : categoryRepository.queryAllCategory()) {
-            Map item = new HashMap();
-            item.put("id", obj[0]);
-            item.put("name", obj[1]);
-            category.add(item);
-        }
-        model.put("categories", category);//添加分类信息
+
+        model.put("categories", categoryService.getCategoryInfo());//添加分类信息
         model.put("editing", true);
         String editor = siteOptions.getValue("editor");
         if (null != id && id > 0) {

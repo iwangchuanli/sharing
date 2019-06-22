@@ -39,7 +39,6 @@ public class PermissionServiceImpl implements PermissionService {
                 predicate.getExpressions().add(
                         builder.like(root.get("name"), "%" + name + "%"));
             }
-
             query.orderBy(builder.desc(root.get("id")));
             return predicate;
         }, pageable);
