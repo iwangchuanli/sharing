@@ -30,7 +30,10 @@ import java.util.Set;
  */
 @CacheConfig(cacheNames = Consts.CACHE_USER)
 public interface PostService {
-
+    /*
+     * 获得文章的上一篇和下一篇
+     * */
+    List getPrevNextPost(Long id);
 
     /*
      * 文章站点地图

@@ -67,9 +67,7 @@ public class ChannelController extends BaseController {
     @RequestMapping("/post/{id:\\d*}")
     public String view(@PathVariable Long id, ModelMap model) {
         PostVO view = postService.get(id);
-
         Assert.notNull(view, "该文章已被删除");
-
         if ("markdown".endsWith(view.getEditor())) {
             PostVO post = new PostVO();
             BeanUtils.copyProperties(view, post);
@@ -77,38 +75,9 @@ public class ChannelController extends BaseController {
             view = post;
         }
         postService.identityViews(id);
-        long last_post_id = postRepository.getLastPost();
-        long prev_id = id - 1;
-        PostVO prevP = new PostVO();
-        prevP.setTitle("没有上一篇了");
-        prevP.setId(id);
-        while (prev_id > 0) {
-            if (postService.get(prev_id) != null) {
-                prevP = postService.get(prev_id);
-                break;
-            }
-            prev_id--;
-        }
-
-        long next_id = id + 1;
-        PostVO nextP = new PostVO();
-        nextP.setTitle("没有下一篇了");
-        nextP.setId(id);
-        while (next_id <= last_post_id) {
-            if (postService.get(next_id) != null) {
-                nextP = postService.get(next_id);
-                break;
-            }
-            next_id++;
-        }
-        List list = new ArrayList();
-        list.add(prevP);
-        list.add(nextP);
-
-        List<Object[]> relevant = postSearchService.relevant(view.getTags());
         model.put("view", view);
-        model.put("adjacent", list);
-        model.put("revelant", relevant);
+        model.put("adjacent", postService.getPrevNextPost(id));
+        model.put("revelant", postSearchService.relevant(view.getTags()));
         return view(Views.POST_VIEW);
     }
 

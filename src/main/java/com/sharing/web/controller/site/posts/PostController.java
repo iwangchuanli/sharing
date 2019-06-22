@@ -46,25 +46,20 @@ public class PostController extends BaseController {
     @GetMapping("/editing")
     public String view(Long id, ModelMap model) {
         model.put("channels", channelService.findAll(Consts.STATUS_NORMAL));//添加栏目信息
-
         model.put("categories", categoryService.getCategoryInfo());//添加分类信息
         model.put("editing", true);
         String editor = siteOptions.getValue("editor");
         if (null != id && id > 0) {
             AccountProfile profile = getProfile();
             PostVO view = postService.get(id);
-
             Assert.notNull(view, "该文章已被删除");
             Assert.isTrue(view.getAuthorId() == profile.getId(), "该文章不属于你");
-
             Assert.isTrue(view.getChannel().getStatus() == Consts.STATUS_NORMAL, "请在后台编辑此文章");
             model.put("view", view);
-
             if (StringUtils.isNoneBlank(view.getEditor())) {
                 editor = view.getEditor();
             }
         }
-
         model.put("editor", editor);
         return view(Views.POST_EDITING);
     }
@@ -76,14 +71,11 @@ public class PostController extends BaseController {
      */
     @PostMapping("/submit")
     public String post(PostVO post) {
-
         Assert.notNull(post, "参数不完整");
         Assert.state(StringUtils.isNotBlank(post.getTitle()), "标题不能为空");
         Assert.state(StringUtils.isNotBlank(post.getContent()), "内容不能为空");
-
         AccountProfile profile = getProfile();
         post.setAuthorId(profile.getId());
-
         // 修改时, 验证归属
         if (post.getId() > 0) {
             PostVO exist = postService.get(post.getId());

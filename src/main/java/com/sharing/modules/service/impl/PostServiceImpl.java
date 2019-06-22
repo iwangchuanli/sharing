@@ -78,6 +78,37 @@ public class PostServiceImpl implements PostService {
 
 
     @Override
+    public List getPrevNextPost(Long id) {
+        long last_post_id = postRepository.getLastPost();
+        long prev_id = id - 1;
+        PostVO prevP = new PostVO();
+        prevP.setTitle("没有上一篇了");
+        prevP.setId(id);
+        while (prev_id > 0) {
+            if (get(prev_id) != null) {
+                prevP = get(prev_id);
+                break;
+            }
+            prev_id--;
+        }
+        long next_id = id + 1;
+        PostVO nextP = new PostVO();
+        nextP.setTitle("没有下一篇了");
+        nextP.setId(id);
+        while (next_id <= last_post_id) {
+            if (get(next_id) != null) {
+                nextP = get(next_id);
+                break;
+            }
+            next_id++;
+        }
+        List list = new ArrayList();
+        list.add(prevP);
+        list.add(nextP);
+        return list;
+    }
+
+    @Override
     public String createSiteMapXmlContent() {
         String baseUrl = "http://www.wangcl.xyz/";
 //        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
