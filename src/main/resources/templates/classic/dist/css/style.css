@@ -2067,3 +2067,21 @@ div.mce-toolbar-grp {
     bottom: 20px;
     background: #000000 url(../images/arrow-bottom.png) no-repeat center;
 }
+/*  回到顶部 */
+#back-top {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    z-index: 99;
+}
+
+#back-top span {
+    width: 150px;
+    height: 174px;
+    display: block;
+    background: url(https://i.loli.net/2018/04/20/5ad9ad7857b27.png) no-repeat center center;
+}
+
+#back-top a {
+    outline: none
+}

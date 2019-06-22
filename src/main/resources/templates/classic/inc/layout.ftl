@@ -28,6 +28,7 @@
         <#--引入bootstrap-->
         <script src="${base}/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
         <link href="${base}/dist/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <script type="text/javascript" src="${base}/theme/classic/dist/js/tidy-js.js"></script>
         <script type="text/javascript">
             var _MTONS = _MTONS || {};
             _MTONS.BASE_PATH = '${base}';

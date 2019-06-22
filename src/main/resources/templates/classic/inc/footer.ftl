@@ -11,7 +11,10 @@
             <div class="gh-foot-min-back hidden-xs hidden-sm">
                 <span class="footer-nav-item">Powered by <a>sharing</a></span>
             </div>
-
+            <br/>
+        </div>
+        <div class="friendLinks" style="text-align: center">
+            友情链接：
         </div>
     </div>
 </footer>
@@ -19,26 +22,6 @@
 <#--<a href="#" class="site-scroll-top">
     <i class="fa fa-rocket"></i>
 </a>-->
-<#--回到顶部-->
-<style>
-    #back-top {
-        position: fixed;
-        bottom: 10px;
-        right: 5px;
-        z-index: 99;
-    }
-
-    #back-top span {
-        width: 150px;
-        height: 174px;
-        display: block;
-        background: url(https://i.loli.net/2018/04/20/5ad9ad7857b27.png) no-repeat center center;
-    }
-
-    #back-top a {
-        outline: none
-    }
-</style>
 <script type="text/javascript">
     $(function () {
         // hide #back-top first
@@ -61,7 +44,6 @@
     });
 </script>
 <p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
-
 
 <#--进度条pace.js初始化-->
 <script type="text/javascript">
