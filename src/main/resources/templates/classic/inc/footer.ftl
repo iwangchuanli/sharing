@@ -13,10 +13,17 @@
             </div>
             <br/>
         </div>
-        <div class="friendLinks" style="text-align: center">
-            友情链接：
+        <div class="friendLinks" style="text-align: center;margin: 0 auto">
+            <table style="table-layout:fixed;text-align: center;">
+                <tr>
+                    <td>友情链接:</td>
+                    <td>&nbsp;<i class="fa fa-rocket"></i><a href="exam.wangcl.xyz" title="EXAM在线测试">EXAM在线测试</a></td>
+                    <td>&nbsp;&nbsp;<i class="fa fa-rocket"></i><a href="video.wangcl.xyz" title="Video视点">Video视点</a></td>
+                    <td>&nbsp;&nbsp;<i class="fa fa-rocket"></i><a href="wangcl.xyz" title="Mr.Wang blog">Mr.Wang blog</a></td>
+                </tr>
         </div>
     </div>
+    <p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
 </footer>
 
 <#--<a href="#" class="site-scroll-top">
@@ -43,7 +50,7 @@
         });
     });
 </script>
-<p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
+
 
 <#--进度条pace.js初始化-->
 <script type="text/javascript">
@@ -154,5 +161,41 @@
                 $(this).prev().attr('class', 'fa fa-commenting-o');
             }
         );
+
+        $(".dropdown").hover(
+            function () {
+                $(".dropdown-menu").show();
+            },
+            function () {
+                $(".dropdown-menu").hide();
+            }
+        );
+        $("a").mouseover(function (e) {
+            this.Mytitle = this.title;//获取超链接 title属性的内容
+            this.title = ""; //设置 title属性内容为空
+            $("body").append("<div id='div_toop'>" + this.Mytitle + "</div>");//将要显示的内容添加到 新建 div标签中 并追加到 body 中
+            $("#div_toop")
+                .css({
+                    //设置 div 内容位置
+                    "top": (e.pageY + 10) + "px",
+                    "position": "absolute",//添加绝对位置
+                    "left": (e.pageX + 20) + "px",
+                    "background": "#cfe6ee",
+                    "border": "0.8px solid",
+                    "border-radius": "5px"
+                }).show("fast");// show(spe.ed,callback) speed: xian'shi'su'du
+        }).mouseout(function () { //鼠标指针从 a标签 上离开时 发生mouseout 事件
+            this.title = this.Mytitle;
+            $("#div_toop").remove();//移除对象
+        }).mousemove(function (e) { //鼠标指针在 a标签 中移动时 发生mouseout 事件
+            $("#div_toop")
+                .css({
+                    //设置 div 内容位置
+                    "top": (e.pageY + 10) + "px",
+                    "position": "absolute",//添加绝对位置
+                    "left": (e.pageX + 20) + "px"
+                });
+        });
+
     });
 </script>

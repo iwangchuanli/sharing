@@ -109,7 +109,7 @@
                         </li>
                     </@controls>
                     <li class="dropdown">
-                        <a href="#" class="user dropdown-toggle" data-toggle="dropdown">
+                        <a href="#" class="user dropdown-toggle" data-toggle="dropdown" ">
                             <img class="img-circle" src="<@resource src=profile.avatar + '?t=' + .now?time />">
                             <span>${profile.name}</span>
                         </a>
