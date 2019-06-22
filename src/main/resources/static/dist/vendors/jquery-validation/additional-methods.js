@@ -1371,7 +1371,7 @@ $.validator.addMethod( "skip_or_fill_minimum", function( value, element, options
 		$fields.data( "being_validated", false );
 	}
 	return isValid;
-}, $.validator.format( "Please either skip these fields or fill at least {0} of them." ) );
+}, $.validator.format( "Please either skin these fields or fill at least {0} of them." ) );
 
 /* Validates US States and/or Territories by @jdforsythe
  * Can be case insensitive or require capitalization - default is case insensitive
