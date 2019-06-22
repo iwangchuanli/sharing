@@ -23,209 +23,224 @@ import java.util.Date;
 
 /**
  * 内容表
- * @author wangcl
  *
+ * @author wangcl
  */
 @Entity
 @Table(name = "sharing_post", indexes = {
-		@Index(name = "IK_CHANNEL_ID", columnList = "channel_id")
+        @Index(name = "IK_CHANNEL_ID", columnList = "channel_id")
 })
 @FilterDefs({
-		@FilterDef(name = "POST_STATUS_FILTER", defaultCondition = "status = 0" )})
-@Filters({ @Filter(name = "POST_STATUS_FILTER") })
+        @FilterDef(name = "POST_STATUS_FILTER", defaultCondition = "status = 0")})
+@Filters({@Filter(name = "POST_STATUS_FILTER")})
 @Indexed(index = "post")
 @Analyzer(impl = SmartChineseAnalyzer.class)
 public class Post implements Serializable {
-	private static final long serialVersionUID = 7144425803920583495L;
+    private static final long serialVersionUID = 7144425803920583495L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@SortableField
-	@NumericField
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SortableField
+    @NumericField
+    private long id;
 
-	/**
-	 * 分组/模块ID
-	 */
-	@Field
-	@NumericField
-	@Column(name = "channel_id", length = 5)
-	private int channelId;
+    /**
+     * 分组/模块ID
+     */
+    @Field
+    @NumericField
+    @Column(name = "channel_id", length = 5)
+    private int channelId;
 
-	/**
-	 * 标题
-	 */
-	@Field
-	@Column(name = "title", length = 64)
-	private String title;
+    /**
+     * 标题
+     */
+    @Field
+    @Column(name = "title", length = 64)
+    private String title;
 
-	/**
-	 * 摘要
-	 */
-	@Field
-	@Column(length = 140)
-	private String summary;
+    /**
+     * 摘要
+     */
+    @Field
+    @Column(length = 140)
+    private String summary;
 
-	/**
-	 * 预览图
-	 */
-	@Column(length = 128)
-	private String thumbnail;
+    /**
+     * 预览图
+     */
+    @Column(length = 128)
+    private String thumbnail;
 
-	/**
-	 * 标签, 多个逗号隔开
-	 */
-	@Field
-	@Column(length = 64)
-	private String tags;
+    /**
+     * 分类ID
+     */
+    @Field
+    @Column(name = "category_id", length = 20)
+    private int categoryId;
 
-	@Field
-	@NumericField
-	@Column(name = "author_id")
-	private long authorId; // 作者
+    /**
+     * 标签, 多个逗号隔开
+     */
+    @Field
+    @Column(length = 64)
+    private String tags;
 
-	@Temporal(value = TemporalType.TIMESTAMP)
-	private Date created;
+    @Field
+    @NumericField
+    @Column(name = "author_id")
+    private long authorId; // 作者
 
-	/**
-	 * 收藏数
-	 */
-	private int favors;
+    @Temporal(value = TemporalType.TIMESTAMP)
+    private Date created;
 
-	/**
-	 * 评论数
-	 */
-	private int comments;
+    /**
+     * 收藏数
+     */
+    private int favors;
 
-	/**
-	 * 阅读数
-	 */
-	private int views;
+    /**
+     * 评论数
+     */
+    private int comments;
 
-	/**
-	 * 文章状态
-	 */
-	private int status;
+    /**
+     * 阅读数
+     */
+    private int views;
 
-	/**
-	 * 推荐状态
-	 */
-	private int featured;
+    /**
+     * 文章状态
+     */
+    private int status;
 
-	/**
-	 * 置顶状态
-	 */
-	private int weight;
+    /**
+     * 推荐状态
+     */
+    private int featured;
 
-	public long getId() {
-		return id;
-	}
+    /**
+     * 置顶状态
+     */
+    private int weight;
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public int getChannelId() {
-		return channelId;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public void setChannelId(int channelId) {
-		this.channelId = channelId;
-	}
+    public int getChannelId() {
+        return channelId;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public void setChannelId(int channelId) {
+        this.channelId = channelId;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public String getSummary() {
-		return summary;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public void setSummary(String summary) {
-		this.summary = summary;
-	}
+    public String getSummary() {
+        return summary;
+    }
 
-	public String getTags() {
-		return tags;
-	}
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
 
-	public void setTags(String tags) {
-		this.tags = tags;
-	}
+    public String getTags() {
+        return tags;
+    }
 
-	public Date getCreated() {
-		return created;
-	}
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
 
-	public void setCreated(Date created) {
-		this.created = created;
-	}
+    public Date getCreated() {
+        return created;
+    }
 
-	public long getAuthorId() {
-		return authorId;
-	}
+    public void setCreated(Date created) {
+        this.created = created;
+    }
 
-	public void setAuthorId(long authorId) {
-		this.authorId = authorId;
-	}
+    public long getAuthorId() {
+        return authorId;
+    }
 
-	public int getStatus() {
-		return status;
-	}
+    public void setAuthorId(long authorId) {
+        this.authorId = authorId;
+    }
 
-	public void setStatus(int status) {
-		this.status = status;
-	}
+    public int getStatus() {
+        return status;
+    }
 
-	public int getFeatured() {
-		return featured;
-	}
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
-	public void setFeatured(int featured) {
-		this.featured = featured;
-	}
+    public int getFeatured() {
+        return featured;
+    }
 
-	public int getFavors() {
-		return favors;
-	}
+    public void setFeatured(int featured) {
+        this.featured = featured;
+    }
 
-	public void setFavors(int favors) {
-		this.favors = favors;
-	}
+    public int getFavors() {
+        return favors;
+    }
 
-	public int getComments() {
-		return comments;
-	}
+    public void setFavors(int favors) {
+        this.favors = favors;
+    }
 
-	public void setComments(int comments) {
-		this.comments = comments;
-	}
+    public int getComments() {
+        return comments;
+    }
 
-	public int getViews() {
-		return views;
-	}
+    public void setComments(int comments) {
+        this.comments = comments;
+    }
 
-	public void setViews(int views) {
-		this.views = views;
-	}
+    public int getViews() {
+        return views;
+    }
 
-	public int getWeight() {
-		return weight;
-	}
+    public void setViews(int views) {
+        this.views = views;
+    }
 
-	public void setWeight(int weight) {
-		this.weight = weight;
-	}
+    public int getWeight() {
+        return weight;
+    }
 
-	public String getThumbnail() {
-		return thumbnail;
-	}
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
 
-	public void setThumbnail(String thumbnail) {
-		this.thumbnail = thumbnail;
-	}
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
 }

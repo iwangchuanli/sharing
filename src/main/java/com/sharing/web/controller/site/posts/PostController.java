@@ -12,11 +12,14 @@ import com.sharing.modules.service.PostService;
 import com.sharing.web.controller.BaseController;
 import com.sharing.web.controller.site.Views;
 import org.apache.commons.lang3.StringUtils;
+import org.hibernate.validator.constraints.EAN;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.*;
 
 /**
  * 文章操作
@@ -38,7 +41,14 @@ public class PostController extends BaseController {
 	 */
 	@GetMapping("/editing")
 	public String view(Long id, ModelMap model) {
-		model.put("channels", channelService.findAll(Consts.STATUS_NORMAL));
+		model.put("channels", channelService.findAll(Consts.STATUS_NORMAL));//添加栏目信息
+		List<Object> category = new ArrayList();
+		Map item1 = new HashMap();item1.put("id",1);item1.put("name","java");
+		Map item2 = new HashMap();item2.put("id",2);item2.put("name","python");
+		category.add(item1);
+		category.add(item2);
+		model.put("categories",category);//添加分类信息
+
 		model.put("editing", true);
 		String editor = siteOptions.getValue("editor");
 		if (null != id && id > 0) {
@@ -55,6 +65,7 @@ public class PostController extends BaseController {
 				editor = view.getEditor();
 			}
 		}
+
 		model.put("editor", editor);
 		return view(Views.POST_EDITING);
 	}
@@ -103,5 +114,4 @@ public class PostController extends BaseController {
 		}
 		return data;
 	}
-
 }

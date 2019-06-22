@@ -51,6 +51,19 @@
             <#-- 分类category -->
             <div class="panel panel-default">
                 <div class="panel-heading">
+                    <h3 class="panel-title">选择分类</h3>
+                </div>
+                <div class="panel-body">
+                    <select class="form-control" name="categoryId" required>
+                        <option value="">请选择分类</option>
+                        <#list categories as row>
+                            <option value="${row.id}" <#if (view.categoryId == row.id)> selected </#if>>${row.name}</option>
+                        </#list>
+                    </select>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
                     <h3 class="panel-title">标签(用逗号或空格分隔)</h3>
                 </div>
                 <div class="panel-body">
