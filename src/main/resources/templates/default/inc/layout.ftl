@@ -43,9 +43,9 @@
     <script src="${base}/dist/vendors/bootstrap/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        var _MTONS = _MTONS || {};
-        _MTONS.BASE_PATH = '${base}';
-        _MTONS.LOGIN_TOKEN = '${profile.id}';
+        var _Sharing = _Sharing || {};
+        _Sharing.BASE_PATH = '${base}';
+        _Sharing.LOGIN_TOKEN = '${profile.id}';
     </script>
 
     <script src="${base}/dist/js/sea.js"></script>

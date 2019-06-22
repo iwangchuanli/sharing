@@ -9,7 +9,7 @@
 */
 
 define(function(require, exports, module) {
-    var J = jQuery, _BATH = _MTONS.BASE_PATH;
+    var J = jQuery, _BATH = _Sharing.BASE_PATH;
 
     var _configs = {
         errorElement: "p",

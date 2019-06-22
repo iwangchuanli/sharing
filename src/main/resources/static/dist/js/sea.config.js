@@ -1,5 +1,5 @@
 seajs.config({
-    base: _MTONS.BASE_PATH,
+    base: _Sharing.BASE_PATH,
     alias: {
         'plugins': 'dist/js/plugins',
 
@@ -50,8 +50,8 @@ seajs.config({
 
     // 路径配置
     paths: {
-        'vendors': _MTONS.BASE_PATH + '/dist/vendors',
-        'dist': _MTONS.BASE_PATH + '/dist'
+        'vendors': _Sharing.BASE_PATH + '/dist/vendors',
+        'dist': _Sharing.BASE_PATH + '/dist'
     },
 
     // 变量配置

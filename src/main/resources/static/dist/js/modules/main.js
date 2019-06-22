@@ -14,7 +14,7 @@ define(function(require, exports, module) {
     // var imagesLazyload = function () {
     // 	require.async('lazyload', function () {
     // 		$("img").lazyload({
-	//    	   		 placeholder: _MTONS.BASE_PATH + '/dist/images/spinner.gif',
+	//    	   		 placeholder: _Sharing.BASE_PATH + '/dist/images/spinner.gif',
 	//    	   		 effect: "fadeIn"
 	//    	   	});
     //     });
@@ -49,7 +49,7 @@ define(function(require, exports, module) {
 			}
 
 			if (parseInt(id) > 0) {
-				jQuery.getJSON(_MTONS.BASE_PATH +'/user/favor', {'id': id}, function (ret) {
+				jQuery.getJSON(_Sharing.BASE_PATH +'/user/favor', {'id': id}, function (ret) {
 					if (ret.code >=0) {
 						var favors = $('#favors').text();
 						$('#favors').text(parseInt(favors) + 1);

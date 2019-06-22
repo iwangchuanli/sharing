@@ -5,7 +5,7 @@ define(function(require, exports, module) {
 
     var Authc = {
         isAuthced: function () {
-            return (typeof(_MTONS.LOGIN_TOKEN) !== 'undefined' && _MTONS.LOGIN_TOKEN.length > 0);
+            return (typeof(_Sharing.LOGIN_TOKEN) !== 'undefined' && _Sharing.LOGIN_TOKEN.length > 0);
         },
         showLogin : function () {
             var that = this;
@@ -17,7 +17,7 @@ define(function(require, exports, module) {
         doPostLogin: function () {
             var un = $('#ajax_login_username').val();
             var pw = $('#ajax_login_password').val();
-            jQuery.post(_MTONS.BASE_PATH + '/api/login', {'username': un, 'password': pw}, function (ret) {
+            jQuery.post(_Sharing.BASE_PATH + '/api/login', {'username': un, 'password': pw}, function (ret) {
                 if (ret && ret.code == 0) {
                     window.location.reload();
                 } else {

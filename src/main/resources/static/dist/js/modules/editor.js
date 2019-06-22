@@ -16,7 +16,7 @@ define(function(require, exports, module) {
                 selector: "#content",
                 theme: 'modern',
                 language: "zh_CN",
-                upload_image_url: _MTONS.BASE_PATH + "/post/upload", //配置的上传图片的路由
+                upload_image_url: _Sharing.BASE_PATH + "/post/upload", //配置的上传图片的路由
                 height: 400,
                 plugins: [
                     'fullpage advlist autolink autosave charmap lists link image print anchor codesample',
@@ -47,8 +47,8 @@ define(function(require, exports, module) {
                 ],
                 // entity_encoding: 'raw',
                 content_css: [
-                    _MTONS.BASE_PATH + '/dist/vendors/bootstrap/css/bootstrap.min.css',
-                    _MTONS.BASE_PATH + '/dist/css/editor.css',
+                    _Sharing.BASE_PATH + '/dist/vendors/bootstrap/css/bootstrap.min.css',
+                    _Sharing.BASE_PATH + '/dist/css/editor.css',
                 ],
                 setup: function(editor) {
                     editor.on('change', function(e) {

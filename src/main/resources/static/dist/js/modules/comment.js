@@ -48,7 +48,7 @@ define(function(require, exports, module) {
                 logo: '<i class="fa fa-smile-o fa-2"></i>',
                 container: document.getElementById('face-btn'),
                 target: document.getElementById('chat_text'),
-                api: _MTONS.BASE_PATH + '/dist/vendors/owo/OwO.json',
+                api: _Sharing.BASE_PATH + '/dist/vendors/owo/OwO.json',
                 position: 'down',
                 width: '600px',
                 maxHeight: '250px'

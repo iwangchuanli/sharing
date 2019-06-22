@@ -30,9 +30,9 @@
         <link href="${base}/dist/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
         <script type="text/javascript" src="${base}/theme/classic/dist/js/tidy-js.js"></script>
         <script type="text/javascript">
-            var _MTONS = _MTONS || {};
-            _MTONS.BASE_PATH = '${base}';
-            _MTONS.LOGIN_TOKEN = '${profile.id}';
+            var _Sharing = _Sharing || {};
+            _Sharing.BASE_PATH = '${base}';
+            _Sharing.LOGIN_TOKEN = '${profile.id}';
         </script>
         <!-- Favicons -->
         <link href="<@resource src=options['site_favicon']/>" rel="apple-touch-icon-precomposed"/>
