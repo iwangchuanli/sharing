@@ -48,9 +48,9 @@
                 </div>
             </div>
             <div class="panel panel-default padding-md">
-                <span>上一篇：<a href="/post/${adjacent[0].id}.html" title="${adjacent[0].title}">${adjacent[0].title}</a>
+                <span>上一篇：<a href="/post/${view.category}-${adjacent[0].id}.html" title="${adjacent[0].title}">${adjacent[0].title}</a>
                 </span>
-                <span>下一篇：<a href="/post/${adjacent[1].id}.html" title="${adjacent[1].title}">${adjacent[1].title}</a>
+                <span>下一篇：<a href="/post/${view.category}-${adjacent[1].id}.html" title="${adjacent[1].title}">${adjacent[1].title}</a>
                 </span>
             </div>
             <!-- relevant -->
@@ -59,12 +59,12 @@
                 <#if revelant??>
                     <#list revelant as reve>
                         <span style="margin-left: 10px">
-                            <a href="${base}/post/${reve[0]}.html">${reve[1]}</a>
+                            <a href="${base}/post/${view.category}-${reve[0]}.html">${reve[1]}</a>
                         </span>
                     </#list>
                 <#else>
                     <span style="margin-left: 10px">
-                        <a href="${base}/post/${view.id}.html">无</a>
+                        <a href="${base}/post/${view.category}-${view.id}.html">无相关推荐</a>
                     </span>
                 </#if>
 

@@ -44,6 +44,7 @@ public class CommentController extends BaseController {
         return commentService.pagingByPostId(pageable, toId);
     }
 
+    /*评论提交*/
     @RequestMapping("/submit")
     public Result post(Long toId, String text, HttpServletRequest request) {
         if (!isAuthenticated()) {

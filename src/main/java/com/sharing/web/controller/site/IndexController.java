@@ -35,7 +35,7 @@ public class IndexController extends BaseController{
 	@Autowired
 	private PostService postService;
 
-
+/*首页*/
 	@RequestMapping(value= {"/", "/index"})
 	public String root(ModelMap model, HttpServletRequest request) {
 		String order = ServletRequestUtils.getStringParameter(request, "order", Consts.order.NEWEST);

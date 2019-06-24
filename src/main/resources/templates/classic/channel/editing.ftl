@@ -54,10 +54,10 @@
                     <h3 class="panel-title">选择分类</h3>
                 </div>
                 <div class="panel-body">
-                    <select class="form-control" name="categoryId" required>
+                    <select class="form-control" name="category" required>
                         <option value="">请选择分类</option>
                         <#list categories as row>
-                            <option value="${row.id}" <#if (view.categoryId == row.id)> selected </#if>>${row.name}</option>
+                            <option value="${row.name}" <#if (view.category == row.name)> selected </#if>>${row.name}</option>
                         </#list>
                     </select>
                 </div>

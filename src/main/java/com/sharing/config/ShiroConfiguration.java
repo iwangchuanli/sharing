@@ -85,6 +85,10 @@ public class ShiroConfiguration {
         hashMap.put("/admin/channel/update", "authc,perms[channel:update]");
         hashMap.put("/admin/channel/delete", "authc,perms[channel:delete]");
 
+        hashMap.put("/admin/category/list", "authc,perms[category:list]");
+        hashMap.put("/admin/category/update", "authc,perms[category:update]");
+        hashMap.put("/admin/category/delete", "authc,perms[category:delete]");
+
         hashMap.put("/admin/post/list", "authc,perms[post:list]");
         hashMap.put("/admin/post/update", "authc,perms[post:update]");
         hashMap.put("/admin/post/delete", "authc,perms[post:delete]");

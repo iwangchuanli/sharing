@@ -3,6 +3,7 @@ package com.sharing.modules.data;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.sharing.base.lang.Consts;
+import com.sharing.modules.entity.Category;
 import com.sharing.modules.entity.Post;
 import com.sharing.modules.entity.Channel;
 import com.sharing.modules.entity.PostAttribute;
@@ -22,7 +23,10 @@ public class PostVO extends Post implements Serializable {
 
 	private UserVO author;
 	private Channel channel;
-	
+
+
+
+
 	@JSONField(serialize = false)
 	private PostAttribute attribute;
 	
@@ -32,7 +36,6 @@ public class PostVO extends Post implements Serializable {
 		}
 		return null;
 	}
-
 	public UserVO getAuthor() {
 		return author;
 	}

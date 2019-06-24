@@ -18,7 +18,7 @@
                                     </div>
                                     <div class="media-body">
                                         <h4 class="media-heading">
-                                            <a href="${base}/post/${row.id}.html">${post.title?html}</a>
+                                            <a href="${base}/post/${row.category}-${row.id}.html">${post.title?html}</a>
                                         </h4>
                                     </div>
                                 </div>

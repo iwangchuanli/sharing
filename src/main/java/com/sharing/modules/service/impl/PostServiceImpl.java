@@ -75,6 +75,8 @@ public class PostServiceImpl implements PostService {
     private PostResourceRepository postResourceRepository;
     @Autowired
     private ResourceRepository resourceRepository;
+    @Autowired
+    private CategoryService categoryService;
 
 
     @Override
@@ -142,23 +144,18 @@ public class PostServiceImpl implements PostService {
     public Page<PostVO> paging(Pageable pageable, int channelId, Set<Integer> excludeChannelIds) {
         Page<Post> page = postRepository.findAll((root, query, builder) -> {
             Predicate predicate = builder.conjunction();
-
             if (channelId > Consts.ZERO) {
                 predicate.getExpressions().add(
                         builder.equal(root.get("channelId").as(Integer.class), channelId));
             }
-
             if (null != excludeChannelIds && !excludeChannelIds.isEmpty()) {
                 predicate.getExpressions().add(
                         builder.not(root.get("channelId").in(excludeChannelIds)));
             }
-
 //			predicate.getExpressions().add(
 //					builder.equal(root.get("featured").as(Integer.class), Consts.FEATURED_DEFAULT));
-
             return predicate;
         }, pageable);
-
         return new PageImpl<>(toPosts(page.getContent()), pageable, page.getTotalElements());
     }
 
@@ -232,11 +229,11 @@ public class PostServiceImpl implements PostService {
         po.setStatus(post.getStatus());
 
         // 处理摘要
-//        if (StringUtils.isBlank(post.getSummary())) {
-//            po.setSummary(trimSummary(post.getEditor(), post.getContent()));
-//        } else {
-//            po.setSummary(post.getSummary());
-//        }
+        if (StringUtils.isBlank(post.getSummary())) {
+            po.setSummary(trimSummary(post.getEditor(), post.getContent()));
+        } else {
+            po.setSummary(post.getSummary());
+        }
 
         postRepository.save(po);
         tagService.batchUpdate(po.getTags(), po.getId());
@@ -265,10 +262,8 @@ public class PostServiceImpl implements PostService {
         Optional<Post> po = postRepository.findById(id);
         if (po.isPresent()) {
             PostVO d = BeanMapUtils.copy(po.get());
-
             d.setAuthor(userService.get(d.getAuthorId()));
             d.setChannel(channelService.getById(d.getChannelId()));
-
             PostAttribute attr = postAttributeRepository.findById(d.getId()).get();
             d.setContent(attr.getContent());
             d.setEditor(attr.getEditor());
@@ -298,12 +293,13 @@ public class PostServiceImpl implements PostService {
                     po.setThumbnail(p.getThumbnail());
                     po.setStatus(p.getStatus());
                     po.setSummary(p.getSummary());
-//                    // 处理摘要
-//                    if (StringUtils.isBlank(p.getSummary())) {
-//                        po.setSummary(trimSummary(p.getEditor(), p.getContent()));
-//                    } else {
-//                        po.setSummary(p.getSummary());
-//                    }
+                    po.setCategory(p.getCategory());
+                    // 处理摘要
+                    if (StringUtils.isBlank(p.getSummary())) {
+                        po.setSummary(trimSummary(p.getEditor(), p.getContent()));
+                    } else {
+                        po.setSummary(p.getSummary());
+                    }
 
                     po.setTags(p.getTags());//标签
 

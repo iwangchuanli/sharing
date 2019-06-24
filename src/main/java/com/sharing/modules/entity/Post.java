@@ -73,11 +73,11 @@ public class Post implements Serializable {
     private String thumbnail;
 
     /**
-     * 分类ID
+     * 分类
      */
     @Field
-    @Column(name = "category_id", length = 20)
-    private int categoryId;
+    @Column(name = "category", length = 64)
+    private String category;
 
     /**
      * 标签, 多个逗号隔开
@@ -236,11 +236,11 @@ public class Post implements Serializable {
         this.thumbnail = thumbnail;
     }
 
-    public int getCategoryId() {
-        return categoryId;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

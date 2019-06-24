@@ -6,8 +6,12 @@
 
     <!-- 文章界面-->
     <rule>
+        <from>^/post/(\w+)-(\w+)\.html$</from>
+        <to>/post/$2/</to>
+    </rule>
+    <rule>
         <from>^/post/(\w+)\.html$</from>
-        <to>/post/$1/</to>
+        <to>/post/$2/</to>
     </rule>
     <!-- 各标题栏 -->
     <rule>

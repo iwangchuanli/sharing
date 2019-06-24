@@ -14,6 +14,7 @@ import com.sharing.base.utils.MarkdownUtils;
 import com.sharing.modules.data.PostVO;
 import com.sharing.modules.entity.Channel;
 import com.sharing.modules.repository.PostRepository;
+import com.sharing.modules.service.CategoryService;
 import com.sharing.modules.service.ChannelService;
 import com.sharing.modules.service.PostSearchService;
 import com.sharing.modules.service.PostService;
@@ -47,8 +48,9 @@ public class ChannelController extends BaseController {
     @Autowired
     private PostSearchService postSearchService;
     @Autowired
-    private PostRepository postRepository;
+    private CategoryService categoryService;
 
+    /*栏目页*/
     @RequestMapping("/channel/{id}")
     public String channel(@PathVariable Integer id, ModelMap model,
                           HttpServletRequest request) {
@@ -64,6 +66,7 @@ public class ChannelController extends BaseController {
         return view(Views.POST_INDEX);
     }
 
+    /*文章详情页*/
     @RequestMapping("/post/{id:\\d*}")
     public String view(@PathVariable Long id, ModelMap model) {
         PostVO view = postService.get(id);
@@ -78,6 +81,7 @@ public class ChannelController extends BaseController {
         model.put("view", view);
         model.put("adjacent", postService.getPrevNextPost(id));
         model.put("revelant", postSearchService.relevant(view.getTags()));
+
         return view(Views.POST_VIEW);
     }
 
