@@ -70,7 +70,20 @@
 		</@sidebar>
 	</div>
 </div>
-
+<div class="panel panel-default widget">
+	<div class="panel-heading">
+		<h3 class="panel-title"><i class="fa fa-tags"></i> 标签云</h3>
+	</div>
+	<div class="panel-body">
+		<@sidebar method="tags_view">
+			<ul class="list">
+				<#list results as row>
+					<li><i class="fa fa-paper-plane-o"></i>&nbsp;  <a class="new_public_a" href="${base}/tag/${row.name}/" title="${row.name}">${row.name}</a></li>
+				</#list>
+			</ul>
+		</@sidebar>
+	</div>
+</div>
 <@controls name="comment">
 <div class="panel panel-default widget">
     <div class="panel-heading">

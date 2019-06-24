@@ -112,7 +112,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public String createSiteMapXmlContent() {
-        String baseUrl = "http://www.wangcl.xyz/";
+        String baseUrl = "https://www.wangcl.xyz/";
 //        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
@@ -120,7 +120,7 @@ public class PostServiceImpl implements PostService {
         try {
             wsg = new WebSitemapGenerator(baseUrl);
             // 首页 url
-            WebSitemapUrl url = new WebSitemapUrl.Options(baseUrl + "/index")
+            WebSitemapUrl url = new WebSitemapUrl.Options(baseUrl + "index")
                     .lastMod(String.valueOf(LocalDateTime.now())).priority(1.0).changeFreq(ChangeFreq.DAILY).build();
             wsg.addUrl(url);
 
@@ -129,7 +129,7 @@ public class PostServiceImpl implements PostService {
 
             // 动态添加 url
             for (Object[] post : posts) {
-                WebSitemapUrl tmpUrl = new WebSitemapUrl.Options(baseUrl + "/post/" + post[0] + ".html")
+                WebSitemapUrl tmpUrl = new WebSitemapUrl.Options(baseUrl + "post/" +post[2]+"-"+ post[0] + ".html")
                         .lastMod(String.valueOf(post[1])).priority(0.9).changeFreq(ChangeFreq.DAILY).build();
                 wsg.addUrl(tmpUrl);
             }

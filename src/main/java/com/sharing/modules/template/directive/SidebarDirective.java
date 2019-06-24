@@ -2,6 +2,7 @@ package com.sharing.modules.template.directive;
 
 import com.sharing.modules.service.CommentService;
 import com.sharing.modules.service.PostService;
+import com.sharing.modules.service.TagService;
 import com.sharing.modules.template.DirectiveHandler;
 import com.sharing.modules.template.TemplateDirective;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,8 @@ public class SidebarDirective extends TemplateDirective {
     private PostService postService;
     @Autowired
     private CommentService commentService;
+    @Autowired
+    private TagService tagService;
 
     @Override
     public String getName() {
@@ -37,6 +40,9 @@ public class SidebarDirective extends TemplateDirective {
                 break;
             case "latest_comments":
                 handler.put(RESULTS, commentService.findLatestComments(size));
+                break;
+            case "tags_view":
+                handler.put(RESULTS,tagService.getTagsView());
                 break;
         }
         handler.render();

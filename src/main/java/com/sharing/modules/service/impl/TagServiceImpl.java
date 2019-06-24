@@ -117,4 +117,16 @@ public class TagServiceImpl implements TagService {
     public void deteleMappingByPostId(long postId) {
         postTagRepository.deleteByPostId(postId);
     }
+
+    @Override
+    public List<Tag> getTagsView() {
+        List<Tag> returnList = new ArrayList<>();
+        for (Object[] obj : tagRepository.queryTagsView()) {
+            Tag tempTag = new Tag();
+            tempTag.setName((String) obj[0]);
+            tempTag.setPosts((Integer) obj[1]);
+            returnList.add(tempTag);
+        }
+        return returnList;
+    }
 }

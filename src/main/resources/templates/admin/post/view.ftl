@@ -64,6 +64,14 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label>分类</label>
+                            <select class="form-control" name="category">
+                                <#list category as row>
+                                    <option value="${row.name}" <#if (view.category == row.name)> selected </#if>>${row.name}</option>
+                                </#list>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>标签</label>
                             <input type="text" name="tags" data-role="tagsinput" class="form-control" value="${view.tags}" placeholder="添加相关标签，逗号分隔 (最多4个)">
                         </div>

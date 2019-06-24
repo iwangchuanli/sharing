@@ -13,6 +13,7 @@ import com.sharing.base.lang.Consts;
 import com.sharing.base.lang.Result;
 import com.sharing.modules.data.AccountProfile;
 import com.sharing.modules.data.PostVO;
+import com.sharing.modules.service.CategoryService;
 import com.sharing.modules.service.ChannelService;
 import com.sharing.modules.service.PostService;
 import com.sharing.web.controller.BaseController;
@@ -43,6 +44,8 @@ public class PostController extends BaseController {
 	private PostService postService;
 	@Autowired
 	private ChannelService channelService;
+	@Autowired
+	private CategoryService categoryService;
 	
 	@RequestMapping("/list")
 	public String list(String title, ModelMap model, HttpServletRequest request) {
@@ -77,6 +80,7 @@ public class PostController extends BaseController {
 		}
 		model.put("editor", editor);
 		model.put("channels", channelService.findAll(Consts.IGNORE));
+		model.put("category",categoryService.getCategoryInfo());
 		return "/admin/post/view";
 	}
 	

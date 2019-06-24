@@ -40,7 +40,7 @@ public interface PostRepository extends JpaRepository<Post, Long>, JpaSpecificat
     @Query("update Post set comments = comments + :increment where id = :id")
     void updateComments(@Param("id") long id, @Param("increment") int increment);
 
-    @Query(value = "select id,created,thumbnail,title,views from Post")
+    @Query(value = "select id,created,category,thumbnail,title,views from Post")
     List<Object[]> queryAllPost();
 
     @Query(nativeQuery = true, value = "SELECT id from sharing_post order by id desc limit 1 ")
