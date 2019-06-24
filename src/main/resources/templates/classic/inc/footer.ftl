@@ -18,14 +18,14 @@
                 <tr>
                     <td>友情链接:</td>
                     <td>&nbsp;<i class="fa fa-rocket"></i><a href="exam.wangcl.xyz" title="EXAM在线测试">EXAM在线测试</a></td>
-                    <td>&nbsp;&nbsp;<i class="fa fa-rocket"></i><a href="video.wangcl.xyz" title="Video视点">Video视点</a></td>
-                    <td>&nbsp;&nbsp;<i class="fa fa-rocket"></i><a href="wangcl.xyz" title="Mr.Wang blog">Mr.Wang blog</a></td>
+                    <td>&nbsp;<i class="fa fa-rocket"></i><a href="video.wangcl.xyz" title="Video视点">Video视点</a></td>
+                    <td>&nbsp;<i class="fa fa-rocket"></i><a href="wangcl.xyz" title="Mr.Wang blog">Mr.Wang blog</a></td>
                 </tr>
         </div>
     </div>
     <p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
 </footer>
-
+<#-- 返回顶部 -->
 <#--<a href="#" class="site-scroll-top">
     <i class="fa fa-rocket"></i>
 </a>-->
@@ -105,13 +105,11 @@
     var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
     var timerID = setInterval(updateTime, 1000);
     updateTime();
-
     function updateTime() {
         var cd = new Date();
         clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
         clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
     };
-
     function zeroPadding(num, digit) {
         var zero = '';
         for (var i = 0; i < digit; i++) {
@@ -133,7 +131,7 @@
         }
     );
 </script>
-
+<#-- jQuery JS控制 -->
 <script>
     $(document).ready(function () {
         <#-- right 热门文章、最新文章、新评论 jquery特效 -->
@@ -161,7 +159,6 @@
                 $(this).prev().attr('class', 'fa fa-commenting-o');
             }
         );
-
         $(".dropdown").hover(
             function () {
                 $(".dropdown-menu").show();
@@ -170,6 +167,7 @@
                 $(".dropdown-menu").hide();
             }
         );
+        /* a标签动态效果 */
         $("a").mouseover(function (e) {
             this.Mytitle = this.title;//获取超链接 title属性的内容
             this.title = ""; //设置 title属性内容为空
@@ -196,6 +194,5 @@
                     "left": (e.pageX + 20) + "px"
                 });
         });
-
     });
 </script>
