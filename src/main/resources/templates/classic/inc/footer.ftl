@@ -159,6 +159,7 @@
                 $(this).prev().attr('class', 'fa fa-commenting-o');
             }
         );
+        /* 用户右上角个人 */
         $(".dropdown").hover(
             function () {
                 $(".dropdown-menu").show();

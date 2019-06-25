@@ -76,11 +76,9 @@
 	</div>
 	<div class="panel-body">
 		<@sidebar method="tags_view">
-			<ul class="list">
 				<#list results as row>
-					<li><i class="fa fa-paper-plane-o"></i>&nbsp;  <a class="new_public_a" href="${base}/tag/${row.name}/" title="${row.name}">${row.name}</a></li>
+					<i class="fa fa-tag"></i>&nbsp; <a class="tags_cloud" href="${base}/tag/${row.name}/" title="${row.name}" style="font-size: ${row.posts}px">${row.name}</a>
 				</#list>
-			</ul>
 		</@sidebar>
 	</div>
 </div>

@@ -64,7 +64,6 @@ public class PostSearchServiceImpl implements PostSearchService {
         FullTextQuery query = fullTextEntityManager.createFullTextQuery(luceneQuery, Post.class);
         query.setFirstResult((int) pageable.getOffset());
         query.setMaxResults(pageable.getPageSize());
-
         SmartChineseAnalyzer analyzer = new SmartChineseAnalyzer();
         SimpleHTMLFormatter formatter = new SimpleHTMLFormatter("<span style='color:red;'>", "</span>");
         QueryScorer scorer = new QueryScorer(luceneQuery);
