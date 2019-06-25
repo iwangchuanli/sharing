@@ -15,4 +15,7 @@ public interface CategoryRepository extends JpaRepository<Category, Integer>, Jp
 
     @Query("select id,categoryId,categoryName,parentCategory,created,updated from Category where categoryId=:categoryId")
     List<Object[]> queryCategoryByCategoryID(@Param("categoryId") int categoryId);
+
+
+
 }

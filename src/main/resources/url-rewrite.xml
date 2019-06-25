@@ -10,7 +10,7 @@
         <to>/post/$2/</to>
     </rule>
     <rule>
-        <from>^/post/(\w+)\.html$</from>
+        <from>^/category/post/(\w+)-(\w+)\.html$</from>
         <to>/post/$2/</to>
     </rule>
     <!-- 各标题栏 -->

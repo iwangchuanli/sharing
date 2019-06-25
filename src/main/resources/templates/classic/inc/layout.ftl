@@ -16,6 +16,7 @@
         <link href="${base}/dist/css/editor.css" rel="stylesheet"/>
         <link href="${base}/dist/css/plugins.css" rel="stylesheet"/>
         <link href="${base}/theme/classic/dist/css/style.css" rel="stylesheet"/>
+        <link href="${base}/theme/classic/dist/css/tidy-css.css" rel="stylesheet"/>
         <#--图标库icon fa 的引入-->
         <link href="${base}/dist/vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet"/>
         <link href="${base}/dist/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
@@ -41,7 +42,6 @@
         <#--引入sea.js,增强原生JavaScript-->
         <script src="${base}/dist/js/sea.js"></script>
         <#--<script src="${base}/dist/js/sea.config.js"></script>-->
-        <!-- 谷歌分析Global site tag (gtag.js) - Google Analytics -->
         <#--百度分析
         <script>
             var _hmt = _hmt || [];

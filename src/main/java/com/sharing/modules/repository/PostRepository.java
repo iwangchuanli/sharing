@@ -49,4 +49,8 @@ public interface PostRepository extends JpaRepository<Post, Long>, JpaSpecificat
     @Query("select id,title from Post where title like CONCAT('%',:tag,'%')")
     List<Object[]> queryPostByTag(@Param("tag") String tag);
 
+    @Query("select id,title,thumbnail,channelId,authorId,views,tags from Post where category = :categoryName")
+    List<Object[]> queryPostByCategory(@Param("categoryName") String categoryName);
+
+
 }

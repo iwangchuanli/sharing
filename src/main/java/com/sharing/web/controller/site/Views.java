@@ -91,7 +91,11 @@ public interface Views {
      * 标签文章列表
      */
     String TAG_VIEW = "/tag/view";
-
+    /*
+     * 分类列表*/
+    String CATEGORY_INDEX = "/category/index";
+    /*分类文章列表*/
+    String CATEGORY_VIEW = "/category/view";
     /**
      * 搜索
      */
