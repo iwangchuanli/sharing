@@ -269,6 +269,7 @@ abbr[data-original-title], abbr[title] {
 .help-block {
     margin-bottom: 5px;
 }
+
 /* HEAD
 -------------------------------------------------- */
 .site-header {
@@ -276,7 +277,7 @@ abbr[data-original-title], abbr[title] {
     top: 0;
     z-index: 99;
     width: 100%;
-    min-height: 60px;
+    min-height: 50px;
     border-bottom: 1px solid #f0f0f0;
     background: #fff;
     opacity: .97;
@@ -1933,6 +1934,7 @@ div.mce-toolbar-grp {
 @media only screen and (max-width: 479px) {
 
 }
+
 /* clock */
 #clock {
     font-family: 'Share Tech Mono', monospace;
@@ -1942,20 +1944,24 @@ div.mce-toolbar-grp {
     color: #daf6ff;
     text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
 }
+
 #clock .time {
     letter-spacing: 0.05em;
     font-size: 20px;
     padding: 5px 0;
 }
+
 #clock .date {
     letter-spacing: 0.1em;
     font-size: 20px;
 }
+
 #clock .text {
     letter-spacing: 0.1em;
     font-size: 12px;
     padding: 20px 0 0;
 }
+
 /*images轮播图==============================*/
 .pb-carouselWarp {
     position: relative;
@@ -1966,10 +1972,12 @@ div.mce-toolbar-grp {
     margin-right: auto;
     margin-top: 5px;
 }
+
 .pb-carouselWarp .pb-carousel {
     position: relative;
     height: 100%;
 }
+
 .pb-carouselWarp .pb-carousel li {
     display: none;
     position: absolute;
@@ -1978,21 +1986,25 @@ div.mce-toolbar-grp {
     top: 0;
     left: 0;
 }
+
 .pb-carouselWarp .pb-carousel li img {
     width: 100%;
     height: 100%;
     vertical-align: middle;
 }
+
 .pb-carouselWarp .pb-carousel .pb-this {
     display: block;
     left: 0;
 }
+
 .pb-carouselWarp .pb-carousel-ind {
     position: absolute;
     bottom: 10px;
     left: 45%;
     transform: translateX(-50%);
 }
+
 .pb-carouselWarp .pb-carousel-ind li {
     float: left;
     width: 10px;
@@ -2002,9 +2014,11 @@ div.mce-toolbar-grp {
     margin: 0 2px;
     cursor: pointer;
 }
+
 .pb-carouselWarp .pb-carousel-ind .pb-this {
     background-color: #000;
 }
+
 .pb-carouselWarp .pb-arrow {
     position: absolute;
     top: 50%;
@@ -2016,14 +2030,17 @@ div.mce-toolbar-grp {
     cursor: pointer;
     border: none;
 }
+
 .pb-carouselWarp .pb-arrow-prev {
     left: 20px;
     background: #000000 url(../images/arrow-left.png) no-repeat center;
 }
+
 .pb-carouselWarp .pb-arrow-next {
     right: 20px;
     background: #000000 url(../images/arrow-right.png) no-repeat center;
 }
+
 .pb-carouselWarp[type='updown'] .pb-carousel-ind {
     position: absolute;
     width: 15px;
@@ -2033,6 +2050,7 @@ div.mce-toolbar-grp {
     right: 20px;
     transform: translateY(-50%);
 }
+
 .pb-carouselWarp[type='updown'] .pb-carousel-ind li {
     float: none;
     width: 15px;
@@ -2041,9 +2059,11 @@ div.mce-toolbar-grp {
     background-color: #ccc;
     margin: 5px 0;
 }
+
 .pb-carouselWarp[type='updown'] .pb-carousel-ind .pb-this {
     background-color: #000;
 }
+
 .pb-carouselWarp[type='updown'] .pb-arrow {
     position: absolute;
     left: 50%;
@@ -2058,12 +2078,61 @@ div.mce-toolbar-grp {
     line-height: 40px;
     cursor: pointer;
 }
+
 .pb-carouselWarp[type='updown'] .pb-arrow-prev {
     top: 20px;
     background: #000000 url(../images/arrow-top.png) no-repeat center;
 }
+
 .pb-carouselWarp[type='updown'] .pb-arrow-next {
     top: auto;
     bottom: 20px;
     background: #000000 url(../images/arrow-bottom.png) no-repeat center;
+}
+
+/*右边栏分类列表样式*/
+.right_category_parent{
+    font-family: "Times New Roman";
+    font-size: 20px;
+}
+.right_category_child{
+    background-color: #9ca5bc;
+}
+.right_category_parent_ul{
+    margin-left: 10px;
+}
+/*分类展示表格样式*/
+.layui-table {
+    width: 840px;
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+.layui-table th{
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+.layui-table td{
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+.layui-table img {
+    width: 150px;
+    height: 60px;
+}
+#pageBar span{
+    margin-left: 5px;
+}
+.layui-input{
+    width: 30px;
+    height: 20px;
 }

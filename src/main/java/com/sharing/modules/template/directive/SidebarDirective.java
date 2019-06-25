@@ -1,5 +1,6 @@
 package com.sharing.modules.template.directive;
 
+import com.sharing.modules.service.CategoryService;
 import com.sharing.modules.service.CommentService;
 import com.sharing.modules.service.PostService;
 import com.sharing.modules.service.TagService;
@@ -21,6 +22,8 @@ public class SidebarDirective extends TemplateDirective {
     private CommentService commentService;
     @Autowired
     private TagService tagService;
+    @Autowired
+    private CategoryService categoryService;
 
     @Override
     public String getName() {
@@ -41,9 +44,13 @@ public class SidebarDirective extends TemplateDirective {
             case "latest_comments":
                 handler.put(RESULTS, commentService.findLatestComments(size));
                 break;
-            case "tags_view":
-                handler.put(RESULTS,tagService.getTagsView());
+            case "category_right":
+                handler.put(RESULTS, categoryService.getCategoryInfo());
                 break;
+            case "tags_view":
+                handler.put(RESULTS, tagService.getTagsView());
+                break;
+
         }
         handler.render();
     }

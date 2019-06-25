@@ -6,11 +6,11 @@
 
     <!-- 文章界面-->
     <rule>
-        <from>^/post/(\w+)-(\w+)\.html$</from>
+        <from>^/post/(.*?)-(\w+)\.html$</from>
         <to>/post/$2/</to>
     </rule>
     <rule>
-        <from>^/category/post/(\w+)-(\w+)\.html$</from>
+        <from>^/category/post/(.*?)-(\w+)\.html$</from>
         <to>/post/$2/</to>
     </rule>
     <!-- 各标题栏 -->

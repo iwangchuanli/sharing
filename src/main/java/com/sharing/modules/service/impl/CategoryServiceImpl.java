@@ -38,6 +38,7 @@ public class CategoryServiceImpl implements CategoryService {
             Map item = new HashMap();
             item.put("id", obj[0]);
             item.put("name", obj[1]);
+            item.put("parent", obj[2]);
             category.add(item);
         }
         return category;
@@ -64,8 +65,8 @@ public class CategoryServiceImpl implements CategoryService {
         List<String> itemList = new ArrayList<>();
         for (Object[] obj : postRepository.queryPostByCategory(categoryName)) {
             String item = "{\"id\": \"" + obj[0] + "\",\"title\": \""
-                    +"<a href=\'/post/"+categoryName+"-"+ obj[0] +".html\' title=\'"+obj[1]+"\'>"+obj[1]+"<\\a>"+
-                    "\",\"thumbnail\": \"<img src=\'" + obj[2] +"\' alt='postImg'>"+
+                    + "<a href=\'/post/" + categoryName + "-" + obj[0] + ".html\' title=\'" + obj[1] + "\'>" + obj[1] + "<\\a>" +
+                    "\",\"thumbnail\": \"<img src=\'" + obj[2] + "\' alt='postImg'>" +
                     "\",\"views\": \"" + obj[5] + "\",\"tags\": \"" + obj[6] + "\"}";
             itemList.add(item);
         }

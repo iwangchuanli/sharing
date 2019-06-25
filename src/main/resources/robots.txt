@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /post/
-Allow: /channel/
-Disallow: /admin
-Disallow: /users/
-Disallow: /tag/
-Sitemap:http://sharing.wangcl.xyz/sitemap.xml

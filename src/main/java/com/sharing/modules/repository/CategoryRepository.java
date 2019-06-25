@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface CategoryRepository extends JpaRepository<Category, Integer>, JpaSpecificationExecutor<Category> {
 
-    @Query("select categoryId,categoryName from Category")
+    @Query("select categoryId,categoryName,parentCategory from Category")
     List<Object[]> queryAllCategory();
 
     @Query("select id,categoryId,categoryName,parentCategory,created,updated from Category where categoryId=:categoryId")
