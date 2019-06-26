@@ -114,7 +114,7 @@
                 <#if row.name ?? >
                     <i class="fa fa-tag"></i>&nbsp; <a class="tags_cloud" href="${base}/tag/${row.name}/"
                                                        title="${row.name}"
-                                                       style="font-size: ${row.posts}px">${row.name}</a>
+                                                       >${row.name}</a>
                 </#if>
             </#list>
         </@sidebar>
