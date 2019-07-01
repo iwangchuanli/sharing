@@ -113,8 +113,7 @@
             <#list results as row>
                 <#if row.name ?? >
                     <i class="fa fa-tag"></i>&nbsp; <a class="tags_cloud" href="${base}/tag/${row.name}/"
-                                                       title="${row.name}"
-                                                       >${row.name}</a>
+                                                       title="${row.name}">${row.name}</a>
                 </#if>
             </#list>
         </@sidebar>

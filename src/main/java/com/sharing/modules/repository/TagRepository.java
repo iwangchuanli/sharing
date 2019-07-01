@@ -15,6 +15,6 @@ import java.util.List;
 public interface TagRepository extends JpaRepository<Tag, Long>, JpaSpecificationExecutor<Tag> {
     Tag findByName(String name);
 
-    @Query("select name,posts from Tag")
+    @Query("select name,posts from Tag where posts > 10")
     List<Object[]> queryTagsView();
 }

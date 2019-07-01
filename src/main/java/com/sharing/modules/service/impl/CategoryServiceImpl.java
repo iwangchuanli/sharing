@@ -64,8 +64,9 @@ public class CategoryServiceImpl implements CategoryService {
     public String jsonQueryPosts(String categoryName) {
         List<String> itemList = new ArrayList<>();
         for (Object[] obj : postRepository.queryPostByCategory(categoryName)) {
+            String title =  obj[1].toString().replace('"',' ').replace('\'',' ');
             String item = "{\"id\": \"" + obj[0] + "\",\"title\": \""
-                    + "<a href=\'/post/" + categoryName + "-" + obj[0] + ".html\' title=\'" + obj[1] + "\'>" + obj[1] + "<\\a>" +
+                    + "<a href=\'/post/" + categoryName + "-" + obj[0] + ".html\' title=\'" + title + "\'>" + title + "<\\a>" +
                     "\",\"thumbnail\": \"<img src=\'" + obj[2] + "\' alt='postImg'>" +
                     "\",\"views\": \"" + obj[5] + "\",\"tags\": \"" + obj[6] + "\"}";
             itemList.add(item);

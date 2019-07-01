@@ -13,7 +13,7 @@
             </div>
             <br/>
         </div>
-        <div class="friendLinks" style="text-align: center;margin: 0 auto">
+        <#--<div class="friendLinks" style="text-align: center;margin: 0 auto">
             <table style="table-layout:fixed;text-align: center;">
                 <tr>
                     <td>友情链接:</td>
@@ -22,14 +22,16 @@
                     <td>&nbsp;<i class="fa fa-rocket"></i><a href="wangcl.xyz" title="Mr.Wang blog">Mr.Wang blog</a>
                     </td>
                 </tr>
-        </div>
+        </div>-->
     </div>
-    <p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
+
 </footer>
+<p id="back-top" style="display:none"><a href="#top"><span></span></a></p>
 <#-- 返回顶部 -->
-<#--<a href="#" class="site-scroll-top">
+<a href="#" class="site-scroll-top">
     <i class="fa fa-rocket"></i>
-</a>-->
+</a>
+
 <script type="text/javascript">
     $(function () {
         // hide #back-top first
@@ -198,6 +200,7 @@
                     "left": (e.pageX + 20) + "px"
                 });
         });
+        $(".right_category_child").hide();
         $(".right_category_parent").click(function () {
                 $(".right_category_child").slideToggle("slow");
             });
