@@ -33,7 +33,7 @@
     </div>
     <div class="panel-body">
         <ul>
-            <li><i class="fa fa-star-o"></i>&nbsp;<a href="${base}/app/test.html">app_test</a></li>
+            <li><i class="fa fa-star-o"></i>&nbsp;<a href="${base}/app/colorpicker.html">app_test</a></li>
             <li><i class="fa fa-star-o"></i>&nbsp;<a href="http://favorites.wangcl.xyz/">云收藏</a></li>
             <li><i class="fa fa-star-o"></i>&nbsp;<a>私人网盘</a></li>
             <li><i class="fa fa-star-o"></i>&nbsp;<a>other</a></li>
