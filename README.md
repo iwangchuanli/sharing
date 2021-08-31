@@ -28,18 +28,18 @@
  TIPS: 
  如遇到启动失败/切换环境变量后启动失败的,请先maven clean后再尝试启动
  IDE得装lombok插件
-```
+ ```
 
-    
-### 版本(3.5)更新内容：
+
+### 更新内容：
     1. 文件存储目录可配置, 见 site.location, 默认为 user.dir
     2. 支持在${site.location}/storage/templates 目录下扩展自己的主题(${site.location}具体位置见启动日志)
     3. 后台未配置对应第三方登录信息时, 前端不显示对应的按钮
     4. 模板优化
     5. 后台配置主题改为自动从目录中加载
     6. 新增markdown编辑器, 可在后台选择tinymce/markdown
-    
-### 版本(3.0)更新内容：
+
+### 更新内容：
     1. 新增开关控制(注册开关, 发文开关, 评论开发)
     2. 后台重写, 替换了所有后台页面功能更完善
     3. 上传图片添加更多支持(本地/又拍云/阿里云/七牛云), 详情见后台系统配置
@@ -56,7 +56,7 @@
     14. 邮件服务后台可配
     15. 新增标签页
     16. 新增注册邮箱验证开关(需要手动删除之前的 sharing_security_code 表)
-        
+
 ### 图片演示 
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175116_449ed877_1758849.jpeg "1.jpg")
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175353_6185e4f1_1758849.jpeg "在这里输入图片标题")
@@ -66,5 +66,4 @@
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175618_4cc45d39_1758849.jpeg "6.jpg")
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175658_78ebdc6e_1758849.jpeg "7.jpg")
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175717_46fc1496_1758849.jpeg "8.jpg")
-
 
