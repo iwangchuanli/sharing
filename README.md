@@ -58,12 +58,9 @@
     16. 新增注册邮箱验证开关(需要手动删除之前的 sharing_security_code 表)
 
 ### 图片演示 
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175116_449ed877_1758849.jpeg "1.jpg")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175353_6185e4f1_1758849.jpeg "在这里输入图片标题")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175438_f3bf5604_1758849.jpeg "3.jpg")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175505_86e7a9d0_1758849.jpeg "4.jpg")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175555_7c74ef37_1758849.jpeg "5.jpg")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175618_4cc45d39_1758849.jpeg "6.jpg")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175658_78ebdc6e_1758849.jpeg "7.jpg")
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0414/175717_46fc1496_1758849.jpeg "8.jpg")
+![](https://cdn.jsdelivr.net/gh/iwangchuanli/cdn@master/image/2022/04/img1_7M2Zti.jpg)
+![](https://cdn.jsdelivr.net/gh/iwangchuanli/cdn@master/image/2022/04/img2_WpUv7Y.jpg)
+![](https://cdn.jsdelivr.net/gh/iwangchuanli/cdn@master/image/2022/04/img3_XVZpM4.jpg)
+![](https://cdn.jsdelivr.net/gh/iwangchuanli/cdn@master/image/2022/04/img4_fBevG7.jpg)
+![](https://cdn.jsdelivr.net/gh/iwangchuanli/cdn@master/image/2022/04/img5_Kc7QVX.jpg)
 
